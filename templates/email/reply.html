@@ -1,0 +1,18 @@
+{% extends "email/base.html" %}
+{% set heading = "Complaint Response" %}
+{% block body %}
+  <p>Dear Employee,</p>
+
+  <p>Thank you for submitting your complaint. Here is our response:</p>
+
+  <p><strong>Feedback ID:</strong> #{{ ticket_id }}<br>
+  <strong>Category:</strong> {{ category }}<br>
+  <strong>Status:</strong> {{ status }}</p>
+
+  <p style="white-space: pre-wrap;">{{ reply_text }}</p>
+
+  <p>If you have any questions, please contact us.</p>
+
+  <p>Warm regards,<br>
+  {{ responder_name or "Support Team" }}</p>
+{% endblock %}

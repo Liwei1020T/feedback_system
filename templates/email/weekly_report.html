@@ -1,0 +1,52 @@
+{% extends "email/base.html" %}
+{% set heading = "Weekly Complaint Report" %}
+{% block body %}
+  <p style="margin-bottom: 18px;">Here are the highlights for {{ period_label }}.</p>
+
+  <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 18px;">
+    <h2 style="font-size: 16px; margin: 0 0 12px 0;">Overview</h2>
+    <ul style="margin: 0; padding-left: 20px; line-height: 1.6;">
+      <li><strong>New complaints:</strong> {{ new_count }}</li>
+      <li><strong>Resolved:</strong> {{ closed_count }}</li>
+      <li><strong>Open backlog:</strong> {{ open_count }}</li>
+    </ul>
+  </div>
+
+  <h2 style="font-size: 16px; margin-bottom: 10px;">Department metrics</h2>
+  <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
+    <thead>
+      <tr style="background-color: #f1f5f9;">
+        <th style="padding: 8px; border: 1px solid #e2e8f0; text-align: left;">Department</th>
+        <th style="padding: 8px; border: 1px solid #e2e8f0;">Total</th>
+        <th style="padding: 8px; border: 1px solid #e2e8f0;">Resolved</th>
+        <th style="padding: 8px; border: 1px solid #e2e8f0;">Pending</th>
+        <th style="padding: 8px; border: 1px solid #e2e8f0;">SLA breach</th>
+        <th style="padding: 8px; border: 1px solid #e2e8f0;">Reopen rate</th>
+        <th style="padding: 8px; border: 1px solid #e2e8f0;">Backlog age</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% if metrics %}
+        {% for metric in metrics %}
+          <tr>
+            <td style="padding: 8px; border: 1px solid #e2e8f0;">{{ metric.department }}</td>
+            <td style="padding: 8px; border: 1px solid #e2e8f0; text-align: center;">{{ metric.total }}</td>
+            <td style="padding: 8px; border: 1px solid #e2e8f0; text-align: center;">{{ metric.resolved }}</td>
+            <td style="padding: 8px; border: 1px solid #e2e8f0; text-align: center;">{{ metric.pending }}</td>
+            <td style="padding: 8px; border: 1px solid #e2e8f0; text-align: center;">{{ metric.sla_breach_rate | round(1) }}%</td>
+            <td style="padding: 8px; border: 1px solid #e2e8f0; text-align: center;">{{ metric.reopen_rate | round(1) }}%</td>
+            <td style="padding: 8px; border: 1px solid #e2e8f0; text-align: center;">{{ metric.avg_backlog_age_hours | round(1) }}h</td>
+          </tr>
+        {% endfor %}
+      {% else %}
+        <tr>
+          <td colspan="7" style="padding: 12px; border: 1px solid #e2e8f0; text-align: center; color: #64748b;">
+            No complaints recorded during this period.
+          </td>
+        </tr>
+      {% endif %}
+    </tbody>
+  </table>
+
+  <p style="margin-top: 24px;">Need further detail? Visit the analytics dashboard for department drill-downs.</p>
+{% endblock %}

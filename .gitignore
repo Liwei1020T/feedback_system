@@ -1,0 +1,48 @@
+# ==========================
+#  General
+# ==========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+*.db
+.DS_Store
+.env
+.env.*
+.vscode/
+.idea/
+*.zip
+*.rar
+*.7z
+
+# ==========================
+#  Python (FastAPI backend)
+# ==========================
+.venv/
+venv/
+backup/
+logs/
+tests/__pycache__/
+app/__pycache__/
+openspec/
+
+# ==========================
+#  Node / React / Vite frontend
+# ==========================
+node_modules/
+dist/
+build/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+
+# ==========================
+#  OS generated files
+# ==========================
+Thumbs.db
+ehthumbs.db
+desktop.ini

@@ -1,0 +1,18 @@
+Dear Employee,
+
+Thank you for submitting your feedback. Here is our response:
+
+Feedback ID: #{{ ticket_id }}
+Category: {{ category }}
+Status: {{ status }}
+
+{{ reply_text }}
+
+If you have any questions, please contact us.
+
+Warm regards,
+{{ responder_name or "Support Team" }}
+
+This is an automated notification from the Jabil Feedback System.
+Please do not reply directly to this email.
+

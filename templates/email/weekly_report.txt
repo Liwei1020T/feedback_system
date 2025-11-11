@@ -1,0 +1,17 @@
+Weekly Complaint Report
+Period: {{ period_label }}
+
+New complaints: {{ new_count }}
+Resolved: {{ closed_count }}
+Open backlog: {{ open_count }}
+
+Department metrics:
+{% if metrics %}
+{% for metric in metrics -%}
+- {{ metric.department }}: total={{ metric.total }}, resolved={{ metric.resolved }}, pending={{ metric.pending }}, SLA breach={{ metric.sla_breach_rate | round(1) }}%, reopen rate={{ metric.reopen_rate | round(1) }}%, backlog age={{ metric.avg_backlog_age_hours | round(1) }}h
+{% endfor %}
+{% else %}
+- No complaints recorded this period.
+{% endif %}
+
+Visit the analytics dashboard for more details.

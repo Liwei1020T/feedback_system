@@ -1,0 +1,7 @@
+{{ heading or "Complaint Management" }}
+
+{{ body_text }}
+
+This is an automated notification from the Jabil Feedback System.
+Please do not reply directly to this email.
+

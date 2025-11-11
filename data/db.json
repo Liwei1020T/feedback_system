@@ -1,0 +1,2337 @@
+{
+  "counters": {
+    "users": 10,
+    "complaints": 12,
+    "attachments": 2,
+    "replies": 15,
+    "categories": 8,
+    "audit_logs": 0,
+    "reports": 10,
+    "notifications": 0
+  },
+  "users": [
+    {
+      "id": 1,
+      "username": "superadmin",
+      "email": "super.admin@example.com",
+      "password_hash": "$2b$12$rOmLsaVxH4HfuiMwc35vvemthjq2mEtvRjgXge21ORtYU40VwfJJ.",
+      "role": "super_admin",
+      "department": "Executive",
+      "plant": null,
+      "initial_password": "superadmin123",
+      "created_at": "2025-10-30T06:57:36.108540",
+      "updated_at": "2025-11-06T04:32:46.838526",
+      "preferences": {
+        "email_notifications": true,
+        "browser_notifications": true,
+        "weekly_summary": true
+      }
+    },
+    {
+      "id": 2,
+      "username": "admin",
+      "email": "admin@example.com",
+      "password_hash": "$2b$12$DaZ6ohD3lSms7c/R/V4hYuTF1XEMMWZ0mAV9Uk45IvuoIevR9Y9sq",
+      "role": "admin",
+      "department": "IT",
+      "plant": "P1",
+      "initial_password": "admin123",
+      "created_at": "2025-10-30T06:57:36.108584",
+      "updated_at": "2025-11-01T17:22:51.922242"
+    },
+    {
+      "id": 3,
+      "username": "it_lead",
+      "email": "it.lead@example.com",
+      "password_hash": "193b9c969359f0c81c400abf78ee8ac427fbb59cff21440c565a45f3faf0a56b",
+      "role": "admin",
+      "department": "IT",
+      "plant": null,
+      "initial_password": "temps3cret",
+      "created_at": "2025-10-30T06:57:36.108602",
+      "updated_at": "2025-10-30T06:57:36.108606"
+    },
+    {
+      "id": 4,
+      "username": "network_specialist",
+      "email": "network.team@example.com",
+      "password_hash": "193b9c969359f0c81c400abf78ee8ac427fbb59cff21440c565a45f3faf0a56b",
+      "role": "admin",
+      "department": "IT",
+      "plant": null,
+      "initial_password": "temps3cret",
+      "created_at": "2025-10-30T06:57:36.108617",
+      "updated_at": "2025-10-30T06:57:36.108620"
+    },
+    {
+      "id": 5,
+      "username": "payroll_lead",
+      "email": "payroll.lead@example.com",
+      "password_hash": "193b9c969359f0c81c400abf78ee8ac427fbb59cff21440c565a45f3faf0a56b",
+      "role": "admin",
+      "department": "Payroll",
+      "plant": "P1",
+      "initial_password": "temps3cret",
+      "created_at": "2025-10-30T06:57:36.108629",
+      "updated_at": "2025-10-30T06:57:36.108632"
+    },
+    {
+      "id": 6,
+      "username": "facilities_lead",
+      "email": "facilities.lead@example.com",
+      "password_hash": "193b9c969359f0c81c400abf78ee8ac427fbb59cff21440c565a45f3faf0a56b",
+      "role": "admin",
+      "department": "Facilities",
+      "plant": "P1",
+      "initial_password": "temps3cret",
+      "created_at": "2025-10-30T06:57:36.108649",
+      "updated_at": "2025-10-30T06:57:36.108651"
+    },
+    {
+      "id": 7,
+      "username": "service_desk",
+      "email": "service.desk@example.com",
+      "password_hash": "193b9c969359f0c81c400abf78ee8ac427fbb59cff21440c565a45f3faf0a56b",
+      "role": "admin",
+      "department": "Unclassified",
+      "plant": null,
+      "initial_password": "temps3cret",
+      "created_at": "2025-10-30T06:57:36.108666",
+      "updated_at": "2025-10-30T06:57:36.108669"
+    },
+    {
+      "id": 8,
+      "username": "operations_manager",
+      "email": "ops.manager@example.com",
+      "password_hash": "193b9c969359f0c81c400abf78ee8ac427fbb59cff21440c565a45f3faf0a56b",
+      "role": "admin",
+      "department": "Facilities",
+      "plant": null,
+      "initial_password": "temps3cret",
+      "created_at": "2025-10-30T06:57:36.108680",
+      "updated_at": "2025-10-30T06:57:36.108682"
+    },
+    {
+      "id": 9,
+      "username": "facilities_p2",
+      "email": "facilities.p2@example.com",
+      "password_hash": "193b9c969359f0c81c400abf78ee8ac427fbb59cff21440c565a45f3faf0a56b",
+      "role": "admin",
+      "department": "Facilities",
+      "plant": "P2",
+      "initial_password": "temps3cret",
+      "created_at": "2025-10-30T06:57:36.108699",
+      "updated_at": "2025-10-30T06:57:36.108701"
+    },
+    {
+      "id": 10,
+      "username": "emp",
+      "email": "test@gamil.com",
+      "password_hash": "$2b$12$drlQ5zsO0RvDlZQDjXD3SuBc.dQDWkS0D4hZhXpE5zfFQuL5EdZ2.",
+      "role": "employee",
+      "department": "IT",
+      "plant": "P1",
+      "manager_id": 2,
+      "initial_password": "12345678",
+      "created_at": "2025-11-05T01:44:50.236515",
+      "updated_at": "2025-11-05T01:44:50.236520"
+    }
+  ],
+  "complaints": [
+    {
+      "id": 1,
+      "emp_id": "EMP1001",
+      "email": "linda.ong@example.com",
+      "phone": "+60123456781",
+      "complaint_text": "Laptop keyboard intermittently fails and VPN disconnects during calls.",
+      "kind": "complaint",
+      "category": "IT",
+      "plant": "P1",
+      "priority": "normal",
+      "status": "Resolved",
+      "ai_confidence": 0.84,
+      "kind_confidence": 0.82,
+      "created_at": "2025-10-30T00:57:36.119556",
+      "updated_at": "2025-11-03T07:45:27.043871",
+      "resolved_at": null,
+      "assigned_to": 4,
+      "assignment_source": "auto:vpn-network-specialist",
+      "assignment_notes": "Detected network connectivity keywords; routed to Network Specialist.\nEscalated to Operations Manager at 2025-10-30 10:10 UTC - Urgent ticket exceeded 8 hour response window.",
+      "attachment_ids": [
+        1
+      ],
+      "ai_insights": {
+        "sentiment": {
+          "sentiment": "negative",
+          "emotion": "frustrated",
+          "urgency_score": 80,
+          "confidence": 0.9,
+          "reasoning": "The customer mentions a specific problem (keyboard failure and VPN disconnection) that affects their work, indicating a high level of frustration. The urgency score is high because the issue impacts their ability to make calls, which is a critical function."
+        },
+        "similar_complaints": [],
+        "suggested_category": "IT",
+        "suggested_priority": "urgent",
+        "suggested_assignee": null,
+        "resolution_template": "**Urgent Case Response Template**\n\nDear [Customer Name],\n\nI am truly sorry to hear that your laptop keyboard is intermittently failing and causing issues with your VPN connection during calls. I can imagine how frustrating this must be for you, especially when time is of the essence. Please know that I am here to help and I will do my best to resolve this issue for you as quickly as possible.\n\nTo better understand the issue, could you please provide me with the [MAKE/MODEL] of your laptop as well as the VPN software you are using? This information will allow me to investigate the matter further and provide you with a more accurate solution. In the meantime, I recommend that you try [RECOMMENDED TEMPORARY SOLUTION, e.g., using an external keyboard or checking your VPN settings].\n\nI want to assure you that I will do everything possible to resolve this issue and get your laptop and VPN connection up and running smoothly. I will work closely with our IT team to identify the root cause and provide a permanent solution. I will also keep you updated on the progress and let you know as soon as I have a resolution in place.\n\nThank you for bringing this to my attention, and I look forward to resolving this issue for you soon. If you have any further questions or concerns, please don't hesitate to reach out to me directly. Your case number is [CASE NUMBER], and I can be reached at [CONTACT INFORMATION].\n\nBest regards,\n[Your Name]\nIT Customer Service",
+        "estimated_resolution_time": 4,
+        "tags": [
+          "laptop keyboard",
+          "VPN disconnect",
+          "defect"
+        ],
+        "analyzed_at": "2025-11-02T13:09:02.511150"
+      },
+      "sentiment_history": [
+        {
+          "sentiment": "negative",
+          "emotion": "frustrated",
+          "urgency_score": 80,
+          "confidence": 0.9,
+          "reasoning": "The customer is experiencing a recurring issue with their laptop keyboard and VPN connectivity, which suggests a level of frustration and inconvenience. The urgency score is high due to the critical nature of VPN connectivity during calls."
+        },
+        {
+          "sentiment": "negative",
+          "emotion": "frustrated",
+          "urgency_score": 80,
+          "confidence": 0.9,
+          "reasoning": "The customer is experiencing a recurring issue with their laptop keyboard and VPN connectivity, which suggests a level of frustration and annoyance. The urgency score is high because the issue is affecting their work, particularly during calls."
+        },
+        {
+          "sentiment": "negative",
+          "emotion": "frustrated",
+          "urgency_score": 60,
+          "confidence": 0.8,
+          "reasoning": "The customer is experiencing a recurring issue with their laptop keyboard and VPN connectivity, which suggests frustration and a need for immediate resolution."
+        },
+        {
+          "sentiment": "negative",
+          "emotion": "frustrated",
+          "urgency_score": 80,
+          "confidence": 0.9,
+          "reasoning": "The customer mentions a specific problem (keyboard failure and VPN disconnection) that affects their work, indicating a high level of frustration. The urgency score is high because the issue impacts their ability to make calls, which is a critical function."
+        }
+      ],
+      "source_channel": "web",
+      "source_metadata": {
+        "email_from": null,
+        "email_subject": null,
+        "email_message_id": null,
+        "platform": null,
+        "post_id": null,
+        "author_handle": null,
+        "public_url": null,
+        "session_id": null,
+        "visitor_ip": null,
+        "browser_info": null,
+        "webhook_source": null,
+        "external_id": null,
+        "api_key_id": null
+      },
+      "first_response_at": null,
+      "resolution_time_hours": null,
+      "internal_notes": [
+        {
+          "id": 1,
+          "complaint_id": 1,
+          "author_id": 1,
+          "author_name": "superadmin",
+          "content": "hg",
+          "mentions": [],
+          "created_at": "2025-11-03T00:07:26.334630",
+          "updated_at": "2025-11-03T00:07:26.334633",
+          "is_pinned": false,
+          "attachments": []
+        },
+        {
+          "id": 2,
+          "complaint_id": 1,
+          "author_id": 1,
+          "author_name": "superadmin",
+          "content": "hg",
+          "mentions": [],
+          "created_at": "2025-11-03T00:07:44.982631",
+          "updated_at": "2025-11-03T00:07:44.982635",
+          "is_pinned": false,
+          "attachments": []
+        },
+        {
+          "id": 3,
+          "complaint_id": 1,
+          "author_id": 1,
+          "author_name": "superadmin",
+          "content": "te",
+          "mentions": [],
+          "created_at": "2025-11-03T00:10:17.368620",
+          "updated_at": "2025-11-03T00:10:17.368625",
+          "is_pinned": false,
+          "attachments": []
+        },
+        {
+          "id": 4,
+          "complaint_id": 1,
+          "author_id": 1,
+          "author_name": "superadmin",
+          "content": "@admin 123",
+          "mentions": [
+            "admin"
+          ],
+          "created_at": "2025-11-03T00:12:44.979882",
+          "updated_at": "2025-11-03T00:12:44.979889",
+          "is_pinned": false,
+          "attachments": []
+        }
+      ],
+      "watchers": []
+    },
+    {
+      "id": 2,
+      "emp_id": "EMP2044",
+      "email": "rahim.yusof@example.com",
+      "phone": "+60123456782",
+      "complaint_text": "Air-conditioning on level 12 is not functioning and meeting rooms are too warm.",
+      "kind": "complaint",
+      "category": "Facilities",
+      "plant": "P2",
+      "priority": "normal",
+      "status": "Resolved",
+      "ai_confidence": 0.76,
+      "kind_confidence": 0.74,
+      "created_at": "2025-10-29T00:57:36.120408",
+      "updated_at": "2025-11-10T13:50:06.980793",
+      "resolved_at": null,
+      "assigned_to": 7,
+      "assignment_source": "auto:service-desk-default",
+      "assignment_notes": "No specific routing rule matched; assigned to Service Desk for triage.",
+      "attachment_ids": [],
+      "ai_insights": {
+        "sentiment": {
+          "sentiment": "negative",
+          "emotion": "disappointed",
+          "urgency_score": 50,
+          "confidence": 0.9,
+          "reasoning": "The customer is expressing a problem with the air-conditioning, which indicates a negative sentiment. The use of 'not functioning' and 'too warm' suggests a disappointed tone. The issue is somewhat urgent as it affects a specific area, but it's not a critical emergency."
+        },
+        "similar_complaints": [
+          {
+            "complaint_id": 4,
+            "similarity_score": 0.8,
+            "matched_keywords": [
+              "facilities",
+              "team"
+            ],
+            "resolution_summary": "The facilities team received positive feedback for their efforts."
+          }
+        ],
+        "suggested_category": "Facilities",
+        "suggested_priority": "normal",
+        "suggested_assignee": null,
+        "resolution_template": "Subject: Re: Concern with Air-conditioning on Level 12\n\nDear [CUSTOMER NAME],\n\nThank you for reaching out to us about the air-conditioning issue on level 12. I can understand how uncomfortable it must be to work in a meeting room with inadequate temperature control. I apologize for any inconvenience this has caused and appreciate you bringing this to our attention.\n\nI'm going to escalate your concern to our facilities team to investigate and resolve the issue as soon as possible. In the meantime, I recommend exploring alternative meeting spaces on other floors that may have better temperature control. If you could please confirm your preferred meeting room location, I can assist in arranging an alternative space for your upcoming meetings.\n\nOur facilities team will work diligently to repair or replace the air-conditioning unit on level 12. We aim to resolve this issue within [TIMEFRAME, e.g., 24-48 hours]. I appreciate your patience and cooperation in this matter. If you have any further concerns or need assistance in the meantime, please don't hesitate to reach out to me directly.\n\nThank you for choosing [COMPANY NAME]. I'm here to support you and ensure your experience is satisfactory. If you have any questions or concerns, please feel free to contact me at [YOUR CONTACT INFORMATION].\n\nBest regards,\n[Your Name]\nCustomer Service Representative\n[COMPANY NAME]",
+        "estimated_resolution_time": 48,
+        "tags": [
+          "air-conditioning",
+          "defect",
+          "facilities"
+        ],
+        "analyzed_at": "2025-11-01T11:17:37.615223"
+      },
+      "sentiment_history": [
+        {
+          "sentiment": "negative",
+          "emotion": "disappointed",
+          "urgency_score": 50,
+          "confidence": 0.9,
+          "reasoning": "The customer is expressing a problem with the air-conditioning, which indicates a negative sentiment. The use of 'not functioning' and 'too warm' suggests a disappointed tone. The issue is somewhat urgent as it affects a specific area, but it's not a critical emergency."
+        }
+      ],
+      "source_channel": "web",
+      "source_metadata": {
+        "email_from": null,
+        "email_subject": null,
+        "email_message_id": null,
+        "platform": null,
+        "post_id": null,
+        "author_handle": null,
+        "public_url": null,
+        "session_id": null,
+        "visitor_ip": null,
+        "browser_info": null,
+        "webhook_source": null,
+        "external_id": null,
+        "api_key_id": null
+      },
+      "first_response_at": null,
+      "resolution_time_hours": null,
+      "internal_notes": [],
+      "watchers": []
+    },
+    {
+      "id": 3,
+      "emp_id": "EMP3307",
+      "email": "meera.chan@example.com",
+      "phone": "+60123456783",
+      "complaint_text": "Salary for September is short by two days and reimbursement is missing.",
+      "kind": "complaint",
+      "category": "Payroll",
+      "plant": "BK",
+      "priority": "urgent",
+      "status": "Resolved",
+      "ai_confidence": 0.9,
+      "kind_confidence": 0.88,
+      "created_at": "2025-10-29T18:57:36.120813",
+      "updated_at": "2025-11-10T13:50:07.006972",
+      "resolved_at": null,
+      "assigned_to": 7,
+      "assignment_source": "auto:service-desk-default",
+      "assignment_notes": "No specific routing rule matched; assigned to Service Desk for triage.",
+      "attachment_ids": [],
+      "ai_insights": {
+        "sentiment": {
+          "sentiment": "negative",
+          "emotion": "frustrated",
+          "urgency_score": 80,
+          "confidence": 0.9,
+          "reasoning": "The customer is unhappy about a discrepancy in their salary and a missing reimbursement, indicating a sense of frustration and a moderate level of urgency."
+        },
+        "similar_complaints": [
+          {
+            "complaint_id": 1,
+            "similarity_score": 0.0,
+            "matched_keywords": [],
+            "resolution_summary": "No match found"
+          },
+          {
+            "complaint_id": 2,
+            "similarity_score": 0.0,
+            "matched_keywords": [],
+            "resolution_summary": "No match found"
+          },
+          {
+            "complaint_id": 3,
+            "similarity_score": 0.0,
+            "matched_keywords": [],
+            "resolution_summary": "No match found"
+          },
+          {
+            "complaint_id": 4,
+            "similarity_score": 0.0,
+            "matched_keywords": [],
+            "resolution_summary": "No match found"
+          },
+          {
+            "complaint_id": 5,
+            "similarity_score": 0.0,
+            "matched_keywords": [],
+            "resolution_summary": "No match found"
+          }
+        ],
+        "suggested_category": "Payroll",
+        "suggested_priority": "urgent",
+        "suggested_assignee": null,
+        "resolution_template": "Dear [Customer's Name],\n\nI am truly sorry to hear that you are experiencing issues with your September salary and reimbursement. I can imagine how frustrating this must be for you, and I want to assure you that we take all payroll discrepancies seriously. Your concern has been escalated to our urgent priority, and we will do our best to resolve this matter as quickly as possible.\n\nTo ensure that we address the issue promptly, I would like to request some additional information from you. Could you please confirm the following details: your employee ID [or payroll reference number], the total amount missing from your September salary, and any documentation related to the reimbursement you are expecting? This information will enable us to investigate the matter further and provide a resolution.\n\nOnce we receive the necessary details, our payroll team will conduct a thorough review and make the necessary corrections. We will also verify the status of your reimbursement and take immediate action to rectify any issues. I estimate that we will be able to provide an update within [TIMEFRAME, e.g., 2-3 business days]. If there are any further issues or concerns, please do not hesitate to reach out to me directly.\n\nThank you for bringing this matter to our attention. I am committed to ensuring that your concerns are addressed promptly and fairly. If you have any questions or require additional assistance, please do not hesitate to contact me at [Your Email Address] or [Your Phone Number]. I look forward to resolving this matter for you as soon as possible.\n\nSincerely,\n[Your Name]\nCustomer Service Representative\n[Company Name]",
+        "estimated_resolution_time": 4,
+        "tags": [
+          "Payroll Issue",
+          "Defect",
+          "Employee"
+        ],
+        "analyzed_at": "2025-11-01T11:13:12.880834"
+      },
+      "sentiment_history": [
+        {
+          "sentiment": "negative",
+          "emotion": "frustrated",
+          "urgency_score": 80,
+          "confidence": 0.9,
+          "reasoning": "The customer is unhappy about a discrepancy in their salary and a missing reimbursement, indicating a sense of frustration and a moderate level of urgency."
+        }
+      ],
+      "source_channel": "web",
+      "source_metadata": {
+        "email_from": null,
+        "email_subject": null,
+        "email_message_id": null,
+        "platform": null,
+        "post_id": null,
+        "author_handle": null,
+        "public_url": null,
+        "session_id": null,
+        "visitor_ip": null,
+        "browser_info": null,
+        "webhook_source": null,
+        "external_id": null,
+        "api_key_id": null
+      },
+      "first_response_at": null,
+      "resolution_time_hours": null,
+      "internal_notes": [
+        {
+          "id": 1,
+          "complaint_id": 3,
+          "author_id": 1,
+          "author_name": "superadmin",
+          "content": "test",
+          "mentions": [],
+          "created_at": "2025-11-03T03:20:25.711517",
+          "updated_at": "2025-11-03T03:20:25.711522",
+          "is_pinned": false,
+          "attachments": []
+        }
+      ],
+      "watchers": []
+    },
+    {
+      "id": 4,
+      "emp_id": "EMP5521",
+      "email": "adrian.lim@example.com",
+      "phone": "+60123456784",
+      "complaint_text": "Kudos to the facilities team\u2014new collaboration space looks amazing and boosts team morale.",
+      "kind": "feedback",
+      "category": "Facilities",
+      "plant": "P1",
+      "priority": "normal",
+      "status": "Resolved",
+      "ai_confidence": 0.78,
+      "kind_confidence": 0.86,
+      "created_at": "2025-10-30T02:57:36.121232",
+      "updated_at": "2025-11-10T13:50:07.041007",
+      "resolved_at": null,
+      "assigned_to": 7,
+      "assignment_source": "auto:service-desk-default",
+      "assignment_notes": "No specific routing rule matched; assigned to Service Desk for triage.",
+      "attachment_ids": [],
+      "ai_insights": {
+        "sentiment": {
+          "sentiment": "positive",
+          "emotion": "satisfied",
+          "urgency_score": 0,
+          "confidence": 1.0,
+          "reasoning": "The customer is expressing gratitude and appreciation for the new collaboration space, indicating a positive sentiment and satisfied emotion."
+        },
+        "similar_complaints": [
+          {
+            "complaint_id": 1,
+            "similarity_score": 0.0,
+            "matched_keywords": [],
+            "resolution_summary": ""
+          },
+          {
+            "complaint_id": 2,
+            "similarity_score": 0.0,
+            "matched_keywords": [],
+            "resolution_summary": ""
+          },
+          {
+            "complaint_id": 3,
+            "similarity_score": 0.0,
+            "matched_keywords": [],
+            "resolution_summary": ""
+          },
+          {
+            "complaint_id": 4,
+            "similarity_score": 0.0,
+            "matched_keywords": [],
+            "resolution_summary": ""
+          }
+        ],
+        "suggested_category": "Facilities",
+        "suggested_priority": "normal",
+        "suggested_assignee": null,
+        "resolution_template": "**Response Template:**\n\nDear [CUSTOMER'S NAME],\n\nThank you for taking the time to share your positive feedback about our new collaboration space. We're thrilled to hear that it's had a positive impact on [TEAM NAME]'s morale. Your satisfaction is our top priority, and we're grateful for your recognition of our facilities team's hard work.\n\nWe're glad that our efforts have made a difference in your experience with us. Our facilities team is dedicated to providing a comfortable and productive environment for all our users. If you have any further suggestions or feedback, please don't hesitate to reach out to us.\n\nWe appreciate your kind words and look forward to continuing to provide you with a great experience. If you have any other questions or concerns, please feel free to contact us at [CONTACT INFORMATION].\n\nThank you again for your feedback. We're committed to delivering the best possible service to you. We appreciate your business and look forward to serving you in the future.\n\nBest regards,\n[Your Name]\n[Your Title]\n[Company Name]\n\n**Admin Instructions:**\n\n- Replace [CUSTOMER'S NAME] with the actual customer's name.\n- Replace [TEAM NAME] with the actual team name mentioned in the complaint.\n- Replace [CONTACT INFORMATION] with the actual contact information (email, phone number, or website).\n- Replace [Your Name], [Your Title] and [Company Name] with the actual information of the customer service representative.",
+        "estimated_resolution_time": 48,
+        "tags": [
+          "facilities",
+          "team morale",
+          "collaboration space"
+        ],
+        "analyzed_at": "2025-10-30T10:30:50.061787"
+      },
+      "sentiment_history": [
+        {
+          "sentiment": "positive",
+          "emotion": "satisfied",
+          "urgency_score": 0,
+          "confidence": 1.0,
+          "reasoning": "The customer is expressing gratitude and appreciation for the new collaboration space, indicating a positive sentiment and satisfied emotion."
+        }
+      ],
+      "source_channel": "web",
+      "source_metadata": {
+        "email_from": null,
+        "email_subject": null,
+        "email_message_id": null,
+        "platform": null,
+        "post_id": null,
+        "author_handle": null,
+        "public_url": null,
+        "session_id": null,
+        "visitor_ip": null,
+        "browser_info": null,
+        "webhook_source": null,
+        "external_id": null,
+        "api_key_id": null
+      },
+      "first_response_at": null,
+      "resolution_time_hours": null,
+      "internal_notes": [],
+      "watchers": []
+    },
+    {
+      "id": 5,
+      "emp_id": "4231137",
+      "email": "ad@jabil.com",
+      "phone": "01131690008",
+      "complaint_text": "My computer cannot start",
+      "kind": "complaint",
+      "category": "IT",
+      "plant": "P1",
+      "priority": "urgent",
+      "status": "Resolved",
+      "ai_confidence": 0.9,
+      "kind_confidence": 1.0,
+      "created_at": "2025-10-30T10:28:26.228939",
+      "updated_at": "2025-11-04T00:50:01.529057",
+      "resolved_at": null,
+      "assigned_to": 3,
+      "assignment_source": "auto:it-urgent",
+      "assignment_notes": "Urgent IT ticket automatically routed to IT Lead.\nEscalated to Operations Manager at 2025-11-01 10:55 UTC - Ticket remained pending longer than 24 hours.",
+      "attachment_ids": [],
+      "ai_insights": {
+        "sentiment": {
+          "sentiment": "negative",
+          "emotion": "frustrated",
+          "urgency_score": 80,
+          "confidence": 0.8,
+          "reasoning": "The customer is experiencing a significant issue with their computer, indicating frustration and a sense of urgency."
+        },
+        "similar_complaints": [],
+        "suggested_category": "IT",
+        "suggested_priority": "urgent",
+        "suggested_assignee": null,
+        "resolution_template": "Dear [CUSTOMER NAME],\n\nI am so sorry to hear that your computer cannot start, and I understand how frustrating this must be for you, especially when you need it to be up and running as soon as possible. I want to assure you that I'm here to help and that we're taking your issue very seriously. Please know that we're committed to resolving this problem for you promptly.\n\nI can imagine how urgent this issue is for you, with an urgency level of 80/100, and I want to assure you that we're treating it with the priority it deserves. Our IT team is ready to assist you in getting your computer back up and running. To better understand the issue, could you please provide us with more details about the error message you're seeing or any recent changes you've made to your computer? This information will help our team to provide a more accurate diagnosis and solution.\n\nOur next step will be to [PLACEHOLDER: NEXT STEPS, e.g., have one of our IT specialists contact you to walk you through some troubleshooting steps or schedule a visit to your location]. We aim to resolve this issue within [PLACEHOLDER: TIMEFRAME, e.g., the next 24 hours] and will keep you updated on our progress. If there's any additional information we need from you or if there are any changes to our estimated resolution time, we will be sure to let you know.\n\nThank you for bringing this to our attention, and please be assured that we're doing everything we can to get your computer started as soon as possible. If you have any questions or concerns in the meantime, don't hesitate to reach out to us at [PLACEHOLDER: CONTACT INFORMATION]. Thank you for your patience and understanding, and we look forward to resolving this issue for you promptly. Best regards, [YOUR NAME].",
+        "estimated_resolution_time": 4,
+        "tags": [
+          "Computer",
+          "Defect",
+          "Startup Issue"
+        ],
+        "analyzed_at": "2025-11-04T00:50:01.526524"
+      },
+      "sentiment_history": [
+        {
+          "sentiment": "negative",
+          "emotion": "frustrated",
+          "urgency_score": 80,
+          "confidence": 0.9,
+          "reasoning": "The customer is expressing a problem with their computer, which indicates a negative sentiment. The simplicity of the complaint suggests a frustrated tone, and the fact that the computer cannot start implies a high level of urgency."
+        },
+        {
+          "sentiment": "negative",
+          "emotion": "frustrated",
+          "urgency_score": 80,
+          "confidence": 0.8,
+          "reasoning": "The customer is experiencing a significant issue with their computer, indicating frustration and a sense of urgency."
+        }
+      ],
+      "source_channel": "web",
+      "source_metadata": {
+        "email_from": null,
+        "email_subject": null,
+        "email_message_id": null,
+        "platform": null,
+        "post_id": null,
+        "author_handle": null,
+        "public_url": null,
+        "session_id": null,
+        "visitor_ip": null,
+        "browser_info": null,
+        "webhook_source": null,
+        "external_id": null,
+        "api_key_id": null
+      },
+      "first_response_at": null,
+      "resolution_time_hours": null,
+      "internal_notes": [],
+      "watchers": []
+    },
+    {
+      "id": 6,
+      "emp_id": "4231137",
+      "email": "tan.li.wei8008@gmail.com",
+      "phone": "01131690008",
+      "complaint_text": "12343",
+      "kind": "complaint",
+      "category": "Unclassified",
+      "plant": "P1",
+      "priority": "normal",
+      "status": "Resolved",
+      "ai_confidence": 0.0,
+      "kind_confidence": 1.0,
+      "created_at": "2025-11-01T23:29:12.064972",
+      "updated_at": "2025-11-10T13:50:07.072140",
+      "resolved_at": null,
+      "assigned_to": 7,
+      "assignment_source": "auto:service-desk-default",
+      "assignment_notes": "No specific routing rule matched; assigned to Service Desk for triage.",
+      "attachment_ids": [],
+      "ai_insights": {
+        "sentiment": {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 0.8,
+          "reasoning": "The complaint text is a single number, which does not convey any emotional tone or urgency. It's likely a mistake or an error code, rather than a genuine customer complaint."
+        },
+        "similar_complaints": [
+          {
+            "complaint_id": 3,
+            "similarity_score": 0.4,
+            "matched_keywords": [
+              "short",
+              "reimbursement",
+              "missing"
+            ],
+            "resolution_summary": "The payroll issue was resolved by reprocessing the payment for the missing days."
+          },
+          {
+            "complaint_id": 4,
+            "similarity_score": 0.2,
+            "matched_keywords": [
+              "team",
+              "space"
+            ],
+            "resolution_summary": "The facilities team was thanked and praised for their efforts in creating a new collaboration space."
+          },
+          {
+            "complaint_id": 3,
+            "similarity_score": 0.1,
+            "matched_keywords": [
+              "payroll",
+              "salary"
+            ],
+            "resolution_summary": "The payroll issue was resolved by reprocessing the payment for the missing days."
+          },
+          {
+            "complaint_id": 4,
+            "similarity_score": 0.1,
+            "matched_keywords": [
+              "morale",
+              "team"
+            ],
+            "resolution_summary": "The facilities team was thanked and praised for their efforts in creating a new collaboration space."
+          },
+          {
+            "complaint_id": 4,
+            "similarity_score": 0.1,
+            "matched_keywords": [
+              "facilities",
+              "team"
+            ],
+            "resolution_summary": "The facilities team was thanked and praised for their efforts in creating a new collaboration space."
+          }
+        ],
+        "suggested_category": "Unclassified",
+        "suggested_priority": "normal",
+        "suggested_assignee": null,
+        "resolution_template": "Subject: Re: Your Recent Concern - [CASE NUMBER: 12343]\n\nDear [CUSTOMER'S NAME],\n\nThank you for reaching out to us about your concern. We apologize for any inconvenience this has caused and appreciate your patience as we work to resolve the issue. We understand that this must be frustrating for you, and we want to assure you that we're committed to finding a solution.\n\nTo better assist you, can you please provide more details about the issue you're experiencing? This will help us to investigate and resolve the matter efficiently. Please reply to this message or contact our customer service team at [CONTACT EMAIL/PHONE NUMBER] so we can gather more information.\n\nOnce we receive the additional information, we'll do our best to resolve the issue promptly. Our goal is to resolve your concern within [TIMEFRAME, e.g., 24-48 hours]. We'll keep you updated on the progress and will notify you as soon as the issue is resolved.\n\nThank you for your cooperation and understanding. We value your business and appreciate your feedback. Please don't hesitate to contact us if you have any further questions or concerns.\n\nBest regards,\n[SERVICE REPRESENTATIVE'S NAME]\nCustomer Service Team\n[COMPANY NAME]",
+        "estimated_resolution_time": 48,
+        "tags": [],
+        "analyzed_at": "2025-11-03T05:45:01.584179"
+      },
+      "sentiment_history": [
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 0.8,
+          "reasoning": "The complaint text is a single number, which does not convey any emotional tone or urgency. It's likely a mistake or an error code, rather than a genuine customer complaint."
+        }
+      ],
+      "source_channel": "web",
+      "source_metadata": {
+        "email_from": null,
+        "email_subject": null,
+        "email_message_id": null,
+        "platform": null,
+        "post_id": null,
+        "author_handle": null,
+        "public_url": null,
+        "session_id": null,
+        "visitor_ip": null,
+        "browser_info": null,
+        "webhook_source": null,
+        "external_id": null,
+        "api_key_id": null
+      },
+      "first_response_at": null,
+      "resolution_time_hours": null,
+      "internal_notes": [],
+      "watchers": []
+    },
+    {
+      "id": 7,
+      "emp_id": "4231137",
+      "email": "hhhh@gmail.com",
+      "phone": "01131690008",
+      "complaint_text": "testing",
+      "kind": "feedback",
+      "category": "Unclassified",
+      "plant": "P1",
+      "priority": "normal",
+      "status": "Pending",
+      "ai_confidence": 0.0,
+      "kind_confidence": 1.0,
+      "created_at": "2025-11-03T03:22:56.177733",
+      "updated_at": "2025-11-10T13:50:07.105879",
+      "resolved_at": null,
+      "assigned_to": 7,
+      "assignment_source": "auto:plant-routing-unclassified-p1",
+      "assignment_notes": "Routed to Unclassified admin for plant P1.",
+      "attachment_ids": [],
+      "ai_insights": {
+        "sentiment": {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 0.5,
+          "reasoning": "The complaint text is simply 'testing' which does not convey any strong emotions or sentiments."
+        },
+        "similar_complaints": [],
+        "suggested_category": "Unclassified",
+        "suggested_priority": "normal",
+        "suggested_assignee": null,
+        "resolution_template": "Dear [CUSTOMER NAME],\n\nI want to start by acknowledging your concern and appreciating the time you took to reach out to us. I understand that you've submitted a query with the text \"testing\" and I'm here to help you with any questions or issues you may have. I can imagine it might be frustrating to not have a clear resolution yet, and I want to assure you that I'm committed to helping you find a solution.\n\nI'd like to learn more about your concern to provide the best possible assistance. Could you please provide more context or clarify what you're trying to test or achieve? This will help me better understand your situation and provide a more accurate solution. I'm here to listen and help in any way I can, and I want to ensure that you feel supported throughout this process.\n\nOnce I have a better understanding of your concern, I'll work on providing a solution or next steps to address the issue. If necessary, I may need to [PLACEHOLDER, e.g., escalate the issue to a specialist or request additional information]. I want to set clear expectations that I'll do my best to resolve this issue as quickly as possible, with a estimated resolution time of [PLACEHOLDER, e.g., 24-48 hours].\n\nThank you for your patience and cooperation. I'm committed to providing you with a positive experience, and I appreciate the opportunity to assist you. If you have any further questions or concerns, please don't hesitate to reach out. I'm looking forward to resolving this issue and providing a satisfactory outcome. Best regards, [YOUR NAME].",
+        "estimated_resolution_time": 48,
+        "tags": [],
+        "analyzed_at": "2025-11-03T15:12:28.093211"
+      },
+      "sentiment_history": [
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 1.0,
+          "reasoning": "The complaint text is a single word 'testing', which does not convey any emotional tone or urgency."
+        },
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 1.0,
+          "reasoning": "The complaint text 'testing' does not convey any emotions or concerns, suggesting a neutral sentiment and calm emotion."
+        },
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 1.0,
+          "reasoning": "The complaint text is a single word 'testing' which does not convey any emotional tone or urgency."
+        },
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 1.0,
+          "reasoning": "The complaint text 'testing' does not convey any emotional tone or sentiment, suggesting a neutral and calm response."
+        },
+        {
+          "sentiment": "neutral",
+          "emotion": "none",
+          "urgency_score": 0,
+          "confidence": 1.0,
+          "reasoning": "The complaint text is a single word 'testing' which does not convey any emotional tone or urgency."
+        },
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 1.0,
+          "reasoning": "The complaint text is a single word 'testing' which does not convey any emotional tone or urgency."
+        },
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 0.5,
+          "reasoning": "The complaint text is a single word 'testing' which does not convey any strong emotions or sentiments."
+        },
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 0.8,
+          "reasoning": "complaint text is empty and non-descriptive"
+        },
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 0.5,
+          "reasoning": "The complaint text is a single word 'testing' which does not convey any strong emotions or sentiments."
+        },
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 0.5,
+          "reasoning": "The complaint text is simply 'testing' which does not convey any strong emotions or sentiments."
+        },
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 0.5,
+          "reasoning": "The complaint text is not descriptive or emotive, indicating a lack of strong sentiment or emotional tone."
+        },
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 0.5,
+          "reasoning": "The complaint text is not descriptive or emotive, indicating a lack of strong sentiment or emotional tone."
+        },
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 0.5,
+          "reasoning": "The complaint text is non-descriptive and lacks emotional language."
+        },
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 0.5,
+          "reasoning": "The complaint text is not descriptive or emotive, indicating a lack of strong sentiment or emotional tone."
+        },
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 0.5,
+          "reasoning": "The complaint text is simply 'testing' which does not convey any strong emotions or sentiments."
+        },
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 0.5,
+          "reasoning": "The complaint text is simply 'testing' which does not convey any emotion or sentiment."
+        },
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 0.5,
+          "reasoning": "The complaint text is simply 'testing' which does not convey any strong emotions or sentiments."
+        }
+      ],
+      "source_channel": "web",
+      "source_metadata": {
+        "email_from": null,
+        "email_subject": null,
+        "email_message_id": null,
+        "platform": null,
+        "post_id": null,
+        "author_handle": null,
+        "public_url": null,
+        "session_id": null,
+        "visitor_ip": null,
+        "browser_info": null,
+        "webhook_source": null,
+        "external_id": null,
+        "api_key_id": null
+      },
+      "first_response_at": null,
+      "resolution_time_hours": null,
+      "internal_notes": [],
+      "watchers": []
+    },
+    {
+      "id": 8,
+      "emp_id": "4231137",
+      "email": "hhhh@gmail.com",
+      "phone": "01131690008",
+      "complaint_text": "there is no space for keeping my umbrella",
+      "kind": "complaint",
+      "category": "Facilities",
+      "plant": "P1",
+      "priority": "normal",
+      "status": "Pending",
+      "ai_confidence": 0.9,
+      "kind_confidence": 0.8,
+      "created_at": "2025-11-04T01:37:19.312690",
+      "updated_at": "2025-11-10T13:50:07.139848",
+      "resolved_at": null,
+      "assigned_to": 7,
+      "assignment_source": "auto:service-desk-default",
+      "assignment_notes": "No specific routing rule matched; assigned to Service Desk for triage.",
+      "attachment_ids": [
+        2
+      ],
+      "ai_insights": {
+        "sentiment": {
+          "sentiment": "negative",
+          "emotion": "frustrated",
+          "urgency_score": 20,
+          "confidence": 0.8,
+          "reasoning": "customer is expressing a need that is not being met"
+        },
+        "similar_complaints": [],
+        "suggested_category": "Facilities",
+        "suggested_priority": "normal",
+        "suggested_assignee": null,
+        "resolution_template": "Dear [CUSTOMER NAME],\n\nI am sorry to hear that you are experiencing difficulty finding space to store your umbrella at our [PLACEHOLDER]. I understand how frustrating it can be when our facilities do not meet your expectations, and I apologize for any inconvenience this has caused. Please know that we value your feedback and appreciate you bringing this to our attention.\n\nI can imagine how important it is to have a convenient and accessible place to keep your umbrella, especially on rainy days. I want to assure you that we take your concern seriously and are committed to finding a solution. Our team is currently exploring options to improve our storage facilities, including [PLACEHOLDER]. We will do our best to provide a more convenient and spacious area for our customers to store their umbrellas.\n\nIn the meantime, I would like to offer an alternative solution. You can [PLACEHOLDER] or contact our staff at [PLACEHOLDER] for assistance with storing your umbrella. We will do our best to accommodate your needs until a more permanent solution is in place. We expect to have a plan in place within [TIMEFRAME] and will keep you updated on our progress.\n\nThank you for your patience and understanding. If you have any further concerns or suggestions, please do not hesitate to contact us. We appreciate your feedback and look forward to serving you better in the future. Thank you for choosing [COMPANY NAME]. Best regards, [YOUR NAME].",
+        "estimated_resolution_time": 48,
+        "tags": [
+          "Storage Space",
+          "Defect",
+          "Umbrella Holder"
+        ],
+        "analyzed_at": "2025-11-04T04:19:27.214920"
+      },
+      "sentiment_history": [
+        {
+          "sentiment": "negative",
+          "emotion": "frustrated",
+          "urgency_score": 20,
+          "confidence": 0.8,
+          "reasoning": "customer is expressing a need that is not being met"
+        }
+      ],
+      "source_channel": "web",
+      "source_metadata": {
+        "email_from": null,
+        "email_subject": null,
+        "email_message_id": null,
+        "platform": null,
+        "post_id": null,
+        "author_handle": null,
+        "public_url": null,
+        "session_id": null,
+        "visitor_ip": null,
+        "browser_info": null,
+        "webhook_source": null,
+        "external_id": null,
+        "api_key_id": null
+      },
+      "first_response_at": null,
+      "resolution_time_hours": null,
+      "internal_notes": [
+        {
+          "id": 1,
+          "complaint_id": 8,
+          "author_id": 1,
+          "author_name": "superadmin",
+          "content": "test\n",
+          "mentions": [],
+          "created_at": "2025-11-04T06:26:25.533655",
+          "updated_at": "2025-11-04T06:26:25.533662",
+          "is_pinned": false,
+          "attachments": []
+        }
+      ],
+      "watchers": []
+    },
+    {
+      "id": 9,
+      "emp_id": "4231137",
+      "email": "liwei_tan@jabil.com",
+      "phone": "01131690008",
+      "complaint_text": "The computer provided by company is very poor in performance, the battery also cannot use long time.",
+      "kind": "complaint",
+      "category": "IT",
+      "plant": "P1",
+      "priority": "normal",
+      "status": "In Progress",
+      "ai_confidence": 0.9,
+      "kind_confidence": 1.0,
+      "created_at": "2025-11-04T06:57:48.556811",
+      "updated_at": "2025-11-10T13:50:07.172694",
+      "resolved_at": null,
+      "assigned_to": 2,
+      "assignment_source": "auto:plant-routing-it-p1",
+      "assignment_notes": "Routed to IT admin for plant P1.",
+      "attachment_ids": [],
+      "ai_insights": {
+        "sentiment": {
+          "sentiment": "negative",
+          "emotion": "disappointed",
+          "urgency_score": 40,
+          "confidence": 0.8,
+          "reasoning": "customer expresses dissatisfaction with product performance and battery life"
+        },
+        "similar_complaints": [],
+        "suggested_category": "IT",
+        "suggested_priority": "normal",
+        "suggested_assignee": null,
+        "resolution_template": "Dear [CUSTOMER NAME],\n\nI am sorry to hear that the computer provided by our company is not meeting your expectations in terms of performance, and the battery life is also not satisfactory. I understand how frustrating it can be to work with a device that is not functioning optimally, and I appreciate you bringing this to our attention. Please know that we value your experience and are committed to making it right.\n\nI can imagine how disappointing it must be to encounter these issues, especially when you rely on your computer for [SPECIFIC TASKS OR PURPOSE]. I want to assure you that we take your concerns seriously and are here to help. Our IT team is dedicated to providing the best possible support, and we will do our best to resolve this issue as soon as possible.\n\nTo address the issue, I recommend that we [PROPOSED SOLUTION, e.g., schedule a replacement or upgrade, send a technician for on-site repair, etc.]. We will also provide a [LOANER DEVICE OR TEMPORARY SOLUTION, IF APPLICABLE] to minimize any disruption to your work. Our goal is to have this issue resolved within [TIMEFRAME, e.g., 3-5 business days]. You can expect to hear from us within [TIMEFRAME] with an update on the status of your request. If you have any further questions or concerns, please do not hesitate to reach out to us at [CONTACT INFORMATION].\n\nThank you for your patience and understanding. We appreciate your business and look forward to resolving this issue to your satisfaction. If you need any assistance in the meantime, please don't hesitate to contact us. We are committed to providing you with the best possible service. Best regards, [YOUR NAME].",
+        "estimated_resolution_time": 48,
+        "tags": [
+          "Computer",
+          "Defect",
+          "Battery Life"
+        ],
+        "analyzed_at": "2025-11-04T07:39:45.830386"
+      },
+      "sentiment_history": [
+        {
+          "sentiment": "negative",
+          "emotion": "disappointed",
+          "urgency_score": 40,
+          "confidence": 0.8,
+          "reasoning": "The customer expresses dissatisfaction with the computer's performance and battery life, indicating a negative sentiment and disappointed emotion."
+        },
+        {
+          "sentiment": "negative",
+          "emotion": "disappointed",
+          "urgency_score": 40,
+          "confidence": 0.8,
+          "reasoning": "customer expresses dissatisfaction with product performance and battery life"
+        }
+      ],
+      "source_channel": "web",
+      "source_metadata": {
+        "email_from": null,
+        "email_subject": null,
+        "email_message_id": null,
+        "platform": null,
+        "post_id": null,
+        "author_handle": null,
+        "public_url": null,
+        "session_id": null,
+        "visitor_ip": null,
+        "browser_info": null,
+        "webhook_source": null,
+        "external_id": null,
+        "api_key_id": null
+      },
+      "first_response_at": null,
+      "resolution_time_hours": null,
+      "internal_notes": [],
+      "watchers": []
+    },
+    {
+      "id": 10,
+      "emp_id": "4231137",
+      "email": "tan.li.wei8008@gmail.com",
+      "phone": "01131690008",
+      "complaint_text": "test",
+      "kind": "feedback",
+      "category": "Unclassified",
+      "plant": "P1",
+      "priority": "normal",
+      "status": "Pending",
+      "ai_confidence": 0.0,
+      "kind_confidence": 0.5,
+      "created_at": "2025-11-06T06:22:22.223871",
+      "updated_at": "2025-11-10T13:50:07.215794",
+      "resolved_at": null,
+      "assigned_to": 7,
+      "assignment_source": "auto:service-desk-default",
+      "assignment_notes": "No specific routing rule matched; assigned to Service Desk for triage.",
+      "attachment_ids": [],
+      "ai_insights": {
+        "sentiment": {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 0.5,
+          "reasoning": "The complaint text is empty and does not convey any emotion or sentiment."
+        },
+        "similar_complaints": [],
+        "suggested_category": "Unclassified",
+        "suggested_priority": "normal",
+        "suggested_assignee": null,
+        "resolution_template": "Dear [CUSTOMER NAME],\n\nI am sorry to hear that you are experiencing an issue, and I appreciate you reaching out to us about your concern. I understand that it can be frustrating when things don't go as expected, and I want to assure you that we are here to help. Please know that we value your feedback and are committed to making things right.\n\nI would like to start by acknowledging that your complaint has been categorized as [CATEGORY] with a priority of [PRIORITY]. I want to assure you that we are taking your concern seriously and will do our best to resolve it as soon as possible. I can imagine how [SPECIFIC EMOTION OR FRUSTRATION] you must be feeling, and I want to assure you that we are here to listen and help.\n\nTo move forward, I would like to request some additional information from you. Could you please provide more details about the issue you are experiencing, such as [SPECIFIC QUESTION OR REQUEST FOR MORE INFORMATION]? This will help us to better understand your concern and provide a more effective solution. Once we have this information, we will [PROVIDE NEXT STEPS OR SOLUTION, e.g., investigate the matter, provide a refund, etc.]. You can expect a resolution to this issue within [TIMEFRAME FOR RESOLUTION, e.g., 3-5 business days].\n\nThank you for your patience and cooperation. We appreciate your business and are committed to providing you with an exceptional experience. If you have any further questions or concerns, please don't hesitate to reach out to us. We are here to help. Thank you for choosing [COMPANY NAME], and we look forward to resolving this issue for you. Best regards, [YOUR NAME].",
+        "estimated_resolution_time": 48,
+        "tags": [],
+        "analyzed_at": "2025-11-10T13:49:33.419136"
+      },
+      "sentiment_history": [
+        {
+          "sentiment": "neutral",
+          "emotion": "calm",
+          "urgency_score": 0,
+          "confidence": 0.5,
+          "reasoning": "The complaint text is empty and does not convey any emotion or sentiment."
+        }
+      ],
+      "source_channel": "web",
+      "source_metadata": {
+        "email_from": null,
+        "email_subject": null,
+        "email_message_id": null,
+        "platform": null,
+        "post_id": null,
+        "author_handle": null,
+        "public_url": null,
+        "session_id": null,
+        "visitor_ip": null,
+        "browser_info": null,
+        "webhook_source": null,
+        "external_id": null,
+        "api_key_id": null
+      },
+      "first_response_at": null,
+      "resolution_time_hours": null,
+      "internal_notes": [],
+      "watchers": []
+    },
+    {
+      "id": 11,
+      "emp_id": "4231137",
+      "email": "tan.li.wei8008@gmail.com",
+      "phone": "01131690008",
+      "complaint_text": "The machine in operation is broken, jobs is stop",
+      "kind": "complaint",
+      "category": "Facilities",
+      "plant": "P1",
+      "priority": "urgent",
+      "status": "Pending",
+      "ai_confidence": 0.8,
+      "kind_confidence": 0.9,
+      "created_at": "2025-11-10T04:37:54.970111",
+      "updated_at": "2025-11-10T13:50:07.253917",
+      "resolved_at": null,
+      "assigned_to": 6,
+      "assignment_source": "auto:plant-routing-facilities-p1",
+      "assignment_notes": "Routed to Facilities admin for plant P1.",
+      "attachment_ids": [],
+      "ai_insights": {
+        "sentiment": {
+          "sentiment": "negative",
+          "emotion": "frustrated",
+          "urgency_score": 80,
+          "confidence": 0.9,
+          "reasoning": "The customer states that a machine is broken, which implies a disruption to their work or production, indicating frustration and a sense of urgency."
+        },
+        "similar_complaints": [],
+        "suggested_category": "Facilities",
+        "suggested_priority": "urgent",
+        "suggested_assignee": null,
+        "resolution_template": "Dear [CUSTOMER NAME],\n\nI am so sorry to hear that the machine in operation is broken, causing jobs to come to a halt. I can imagine how frustrating this must be for you, and I want to assure you that we take this issue seriously. Please know that we are here to help and are committed to getting the machine up and running as soon as possible.\n\nI understand the urgency of this situation, and I want to assure you that we are treating this as a high-priority issue. Our facilities team will [NEXT STEPS, e.g., send a technician to assess and repair the machine] as soon as possible. In the meantime, I would like to offer [ALTERNATIVE SOLUTION, e.g., a temporary workaround or alternative equipment] to minimize the disruption to your work. We will work closely with you to ensure that the solution meets your needs and gets your jobs back on track.\n\nWe expect to have the machine repaired or replaced by [TIMEFRAME, e.g., end of day or within 24 hours]. Our team will keep you updated on the progress and will notify you as soon as the machine is operational again. If there's anything we can do in the meantime to support you, please don't hesitate to reach out. Your satisfaction is our top priority, and we appreciate your patience and understanding as we work to resolve this issue.\n\nThank you for bringing this to our attention, and please let us know if you have any further concerns. We appreciate your business and look forward to resolving this issue promptly. If you need any further assistance, please don't hesitate to contact us at [CONTACT INFORMATION, e.g., phone number or email]. Best regards, [YOUR NAME].",
+        "estimated_resolution_time": 4,
+        "tags": [
+          "Machine Defect",
+          "Operational Delay",
+          "Equipment Failure"
+        ],
+        "analyzed_at": "2025-11-10T08:10:02.572534"
+      },
+      "sentiment_history": [
+        {
+          "sentiment": "negative",
+          "emotion": "frustrated",
+          "urgency_score": 80,
+          "confidence": 0.9,
+          "reasoning": "The customer states that a machine is broken, which has stopped jobs, indicating a sense of frustration and urgency."
+        },
+        {
+          "sentiment": "negative",
+          "emotion": "frustrated",
+          "urgency_score": 80,
+          "confidence": 0.9,
+          "reasoning": "The customer states that a machine is broken, which implies a disruption to their work or production, indicating frustration and a sense of urgency."
+        }
+      ],
+      "source_channel": "web",
+      "source_metadata": {
+        "email_from": null,
+        "email_subject": null,
+        "email_message_id": null,
+        "platform": null,
+        "post_id": null,
+        "author_handle": null,
+        "public_url": null,
+        "session_id": null,
+        "visitor_ip": null,
+        "browser_info": null,
+        "webhook_source": null,
+        "external_id": null,
+        "api_key_id": null
+      },
+      "first_response_at": null,
+      "resolution_time_hours": null,
+      "internal_notes": [
+        {
+          "id": 1,
+          "complaint_id": 11,
+          "author_id": 1,
+          "author_name": "superadmin",
+          "content": "@admin hello\n",
+          "mentions": [
+            "admin"
+          ],
+          "created_at": "2025-11-10T05:28:31.211260",
+          "updated_at": "2025-11-10T05:28:31.211265",
+          "is_pinned": false,
+          "attachments": []
+        }
+      ],
+      "watchers": []
+    },
+    {
+      "id": 12,
+      "emp_id": "4231137",
+      "email": "tan.li.wei8008@gmail.com",
+      "phone": "01131690008",
+      "complaint_text": "the operation machine is broken",
+      "kind": "complaint",
+      "category": "Facilities",
+      "plant": "P1",
+      "priority": "normal",
+      "status": "Pending",
+      "ai_confidence": 0.8,
+      "kind_confidence": 0.9,
+      "created_at": "2025-11-10T08:22:20.498459",
+      "updated_at": "2025-11-10T13:50:07.291690",
+      "resolved_at": null,
+      "assigned_to": 6,
+      "assignment_source": "auto:plant-routing-facilities-p1",
+      "assignment_notes": "Routed to Facilities admin for plant P1.",
+      "attachment_ids": [],
+      "ai_insights": {
+        "sentiment": {
+          "sentiment": "negative",
+          "emotion": "frustrated",
+          "urgency_score": 80,
+          "confidence": 0.8,
+          "reasoning": "The customer reports a broken machine, indicating a problem that needs prompt attention."
+        },
+        "similar_complaints": [],
+        "suggested_category": "Facilities",
+        "suggested_priority": "normal",
+        "suggested_assignee": null,
+        "resolution_template": "Dear [CUSTOMER NAME],\n\nI am writing to acknowledge your concern regarding the broken operation machine in our facilities. I apologize for the inconvenience this has caused and appreciate you taking the time to bring this issue to our attention. I understand how frustrating it can be when equipment is not functioning properly, and I want to assure you that we are committed to resolving this issue as soon as possible.\n\nPlease know that we take situations like this seriously and are empathetic to the impact it may have on your experience with us. I want to assure you that we are taking immediate action to address the problem. Our maintenance team will be notified and will work to repair or replace the machine as quickly as possible. In the meantime, I would like to offer [ALTERNATIVE SOLUTION, IF APPLICABLE] to minimize any disruption to your activities.\n\nOur team will work diligently to resolve this issue by [EXPECTED RESOLUTION TIMEFRAME, e.g., end of the day, tomorrow, etc.]. You can expect to receive an update from us once the repair or replacement has been completed. If you have any further concerns or questions, please do not hesitate to reach out to us. We appreciate your patience and understanding in this matter and are committed to providing you with the best possible experience.\n\nThank you for your understanding, and we look forward to resolving this issue promptly. If you need any assistance or have any other concerns, please do not hesitate to contact us at [CONTACT INFORMATION]. Thank you for choosing [COMPANY NAME], and we appreciate your business. Sincerely, [YOUR NAME].",
+        "estimated_resolution_time": 48,
+        "tags": [
+          "operation machine",
+          "defect",
+          "equipment failure"
+        ],
+        "analyzed_at": "2025-11-10T08:22:55.955109"
+      },
+      "sentiment_history": [
+        {
+          "sentiment": "negative",
+          "emotion": "frustrated",
+          "urgency_score": 80,
+          "confidence": 0.8,
+          "reasoning": "The customer reports a broken machine, indicating a problem that needs prompt attention."
+        }
+      ],
+      "source_channel": "web",
+      "source_metadata": {
+        "email_from": null,
+        "email_subject": null,
+        "email_message_id": null,
+        "platform": null,
+        "post_id": null,
+        "author_handle": null,
+        "public_url": null,
+        "session_id": null,
+        "visitor_ip": null,
+        "browser_info": null,
+        "webhook_source": null,
+        "external_id": null,
+        "api_key_id": null
+      },
+      "first_response_at": "2025-11-10T08:23:29.445406",
+      "resolution_time_hours": null,
+      "internal_notes": [],
+      "watchers": []
+    }
+  ],
+  "attachments": [
+    {
+      "id": 1,
+      "complaint_id": 1,
+      "reply_id": null,
+      "file_name": "error-screenshot.png",
+      "file_path": "/tmp/error-screenshot.png",
+      "file_type": "image/png",
+      "file_size": 245678,
+      "uploaded_at": "2025-10-30T06:57:36.121745"
+    },
+    {
+      "id": 2,
+      "complaint_id": 8,
+      "reply_id": null,
+      "file_name": "umbrella.jpg",
+      "file_path": "C:\\Users\\tanli\\Desktop\\Jabil\\uploads\\87c4b7ba-4550-432a-8d12-91e52ae4a88e_umbrella.jpg",
+      "file_type": "image/jpeg",
+      "file_size": 32458,
+      "uploaded_at": "2025-11-04T01:37:19.910121"
+    }
+  ],
+  "replies": [
+    {
+      "id": 1,
+      "complaint_id": 3,
+      "admin_id": 2,
+      "reply_text": "Payroll team recalculated your hours and the adjustment will be in the next cycle.",
+      "email_sent": true,
+      "email_sent_at": "2025-10-30T06:57:36.121277",
+      "created_at": "2025-10-30T06:57:36.121689"
+    },
+    {
+      "id": 2,
+      "complaint_id": 5,
+      "admin_id": 1,
+      "reply_text": "Dear [Employee Name],\r\n\r\nThank you for reaching out to us about the issue with your computer. We apologize for the inconvenience this is causing and are here to help. Our IT team will investigate the issue and work to resolve it as soon as possible. In the meantime, please try restarting your computer in safe mode to see if that resolves the issue. If the problem persists, our technician will be in touch with you shortly to further assist. Thank you for your patience and understanding.\r\n\r\nBest regards, [Your Name]",
+      "email_sent": false,
+      "email_sent_at": null,
+      "created_at": "2025-11-01T17:40:16.184145"
+    },
+    {
+      "id": 3,
+      "complaint_id": 1,
+      "admin_id": 1,
+      "reply_text": "Dear [Employee Name],\r\n\r\nThank you for bringing this issue to our attention. We apologize for the inconvenience caused by the intermittent laptop keyboard failure and VPN disconnections during calls. We take these issues seriously and are working to resolve them as quickly as possible. Our IT team will investigate and repair/replace the laptop keyboard and resolve the VPN issue. In the meantime, please let us know if you need a temporary loaner laptop or keyboard. We appreciate your patience and understanding as we work to resolve this issue.\r\n\r\nBest regards, [Your Name]",
+      "email_sent": false,
+      "email_sent_at": null,
+      "created_at": "2025-11-01T22:18:29.561722"
+    },
+    {
+      "id": 4,
+      "complaint_id": 2,
+      "admin_id": 1,
+      "reply_text": "Dear [Employee Name],\r\n\r\nThank you for bringing this to our attention. We apologize for the inconvenience caused by the malfunctioning air-conditioning on level 12. Our facilities team will investigate and repair the issue as soon as possible. In the meantime, we will make sure to provide a comfortable working environment for you. Please let us know if there's anything else we can do to support you.\r\n\r\nBest regards, [Your Name]",
+      "email_sent": false,
+      "email_sent_at": null,
+      "created_at": "2025-11-01T22:19:03.797405"
+    },
+    {
+      "id": 5,
+      "complaint_id": 5,
+      "admin_id": 1,
+      "reply_text": "Dear [Employee Name],\r\n\r\nThank you for reaching out to us about the issue with your computer. We apologize for the inconvenience this is causing and are here to help. Our IT team is investigating the issue as a priority and will be in touch with you shortly to discuss the next steps. In the meantime, please try restarting your computer and checking for any loose connections. If the issue persists, please let us know and we will do our best to resolve it as quickly as possible.\r\n\r\nBest regards, [Your Name]",
+      "email_sent": false,
+      "email_sent_at": null,
+      "created_at": "2025-11-01T22:58:22.753137"
+    },
+    {
+      "id": 6,
+      "complaint_id": 1,
+      "admin_id": 1,
+      "reply_text": "Dear [Employee Name],\r\n\r\nThank you for bringing this urgent issue to our attention. We apologize for the inconvenience caused by the intermittent laptop keyboard failure and VPN disconnections during calls. We are working diligently to resolve this issue as soon as possible. In the meantime, we would like to schedule a meeting with you to troubleshoot the issue and identify potential causes. Please let us know a convenient time for you to meet. We appreciate your patience and understanding in this matter.",
+      "email_sent": false,
+      "email_sent_at": null,
+      "created_at": "2025-11-02T00:48:10.026453"
+    },
+    {
+      "id": 7,
+      "complaint_id": 1,
+      "admin_id": 1,
+      "reply_text": "Dear [Employee Name],\r\n\r\nThank you for bringing this urgent issue to our attention. We apologize for the inconvenience caused by the intermittent laptop keyboard failure and VPN disconnections during calls. Our IT team is working on resolving this issue as soon as possible. In the meantime, we recommend using a temporary keyboard or alternative VPN connection method to minimize disruptions. We will keep you updated on the progress and appreciate your patience and understanding.",
+      "email_sent": false,
+      "email_sent_at": null,
+      "created_at": "2025-11-02T02:12:06.901547"
+    },
+    {
+      "id": 8,
+      "complaint_id": 9,
+      "admin_id": 1,
+      "reply_text": "Dear [CUSTOMER NAME],\r\n\r\nI am writing to acknowledge your concern regarding the computer provided by our company, which you have reported to be performing poorly with a short battery life. I understand how frustrating this must be for you, and I apologize for any inconvenience this has caused. We appreciate you bringing this issue to our attention and are committed to finding a solution to get you back up and running efficiently.\r\n\r\nI can imagine how disappointing it must be to experience these technical difficulties, and I want to assure you that we take your concerns seriously. Our team is dedicated to providing the best possible support to resolve this issue as quickly as possible. To better assist you, I would like to inform you that our next steps will involve [NEXT STEPS, e.g., sending a replacement computer, scheduling a repair, or providing troubleshooting guidance]. Our goal is to ensure that you have a functional computer that meets your needs and expectations.\r\n\r\nIn terms of resolving this issue, we anticipate that it will take [TIMEFRAME, e.g., 3-5 business days] to [SPECIFIC ACTION, e.g., deliver a replacement computer or complete the repair]. We will keep you updated on the progress and notify you as soon as the issue is resolved. If you have any further questions or concerns, please do not hesitate to reach out to us. Your satisfaction is our top priority, and we are committed to making things right.\r\n\r\nThank you for your patience and understanding. We appreciate your business and value your relationship with our company. If you need any further assistance, please contact us at [CONTACT INFORMATION]. Sincerely, [YOUR NAME], [COMPANY NAME] Customer Support Team.",
+      "email_sent": false,
+      "email_sent_at": null,
+      "created_at": "2025-11-04T06:58:29.742547"
+    },
+    {
+      "id": 9,
+      "complaint_id": 9,
+      "admin_id": 1,
+      "reply_text": "testing",
+      "email_sent": false,
+      "email_sent_at": null,
+      "created_at": "2025-11-04T07:01:48.454909"
+    },
+    {
+      "id": 10,
+      "complaint_id": 9,
+      "admin_id": 1,
+      "reply_text": "test",
+      "email_sent": false,
+      "email_sent_at": null,
+      "created_at": "2025-11-04T07:07:32.122365"
+    },
+    {
+      "id": 11,
+      "complaint_id": 9,
+      "admin_id": 1,
+      "reply_text": "123",
+      "email_sent": false,
+      "email_sent_at": null,
+      "created_at": "2025-11-04T07:33:41.683623"
+    },
+    {
+      "id": 12,
+      "complaint_id": 9,
+      "admin_id": 1,
+      "reply_text": "test",
+      "email_sent": true,
+      "email_sent_at": "2025-11-04T07:38:30.384045",
+      "created_at": "2025-11-04T07:38:30.384120"
+    },
+    {
+      "id": 13,
+      "complaint_id": 9,
+      "admin_id": 1,
+      "reply_text": "Dear [CUSTOMER NAME],\r\n\r\nI am sorry to hear that the computer provided by our company is not meeting your expectations in terms of performance, and the battery life is also not satisfactory. I understand how frustrating it can be to work with a device that is not functioning optimally, and I appreciate you bringing this to our attention. Please know that we value your experience and are committed to making it right.\r\n\r\nI can imagine how disappointing it must be to encounter these issues, especially when you rely on your computer for [SPECIFIC TASKS OR PURPOSE]. I want to assure you that we take your concerns seriously and are here to help. Our IT team is dedicated to providing the best possible support, and we will do our best to resolve this issue as soon as possible.\r\n\r\nTo address the issue, I recommend that we [PROPOSED SOLUTION, e.g., schedule a replacement or upgrade, send a technician for on-site repair, etc.]. We will also provide a [LOANER DEVICE OR TEMPORARY SOLUTION, IF APPLICABLE] to minimize any disruption to your work. Our goal is to have this issue resolved within [TIMEFRAME, e.g., 3-5 business days]. You can expect to hear from us within [TIMEFRAME] with an update on the status of your request. If you have any further questions or concerns, please do not hesitate to reach out to us at [CONTACT INFORMATION].\r\n\r\nThank you for your patience and understanding. We appreciate your business and look forward to resolving this issue to your satisfaction. If you need any assistance in the meantime, please don't hesitate to contact us. We are committed to providing you with the best possible service. Best regards, [YOUR NAME].",
+      "email_sent": true,
+      "email_sent_at": "2025-11-04T07:40:03.842821",
+      "created_at": "2025-11-04T07:40:03.842982"
+    },
+    {
+      "id": 14,
+      "complaint_id": 9,
+      "admin_id": 1,
+      "reply_text": "testing",
+      "email_sent": true,
+      "email_sent_at": "2025-11-04T07:51:34.576461",
+      "created_at": "2025-11-04T07:51:34.576509"
+    },
+    {
+      "id": 15,
+      "complaint_id": 12,
+      "admin_id": 1,
+      "reply_text": "Dear [CUSTOMER NAME],\r\n\r\nI am writing to acknowledge your concern regarding the broken operation machine in our facilities. I apologize for the inconvenience this has caused and appreciate you taking the time to bring this issue to our attention. I understand how frustrating it can be when equipment is not functioning properly, and I want to assure you that we are committed to resolving this issue as soon as possible.\r\n\r\nPlease know that we take situations like this seriously and are empathetic to the impact it may have on your experience with us. I want to assure you that we are taking immediate action to address the problem. Our maintenance team will be notified and will work to repair or replace the machine as quickly as possible. In the meantime, I would like to offer [ALTERNATIVE SOLUTION, IF APPLICABLE] to minimize any disruption to your activities.\r\n\r\nOur team will work diligently to resolve this issue by [EXPECTED RESOLUTION TIMEFRAME, e.g., end of the day, tomorrow, etc.]. You can expect to receive an update from us once the repair or replacement has been completed. If you have any further concerns or questions, please do not hesitate to reach out to us. We appreciate your patience and understanding in this matter and are committed to providing you with the best possible experience.\r\n\r\nThank you for your understanding, and we look forward to resolving this issue promptly. If you need any assistance or have any other concerns, please do not hesitate to contact us at [CONTACT INFORMATION]. Thank you for choosing [COMPANY NAME], and we appreciate your business. Sincerely, [YOUR NAME].",
+      "email_sent": true,
+      "email_sent_at": "2025-11-10T08:23:29.445298",
+      "created_at": "2025-11-10T08:23:29.445406"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "HR",
+      "description": "Human Resources related complaints",
+      "created_at": "2025-10-30T06:57:36.108747"
+    },
+    {
+      "id": 2,
+      "name": "Payroll",
+      "description": "Salary and payment issues",
+      "created_at": "2025-10-30T06:57:36.108771"
+    },
+    {
+      "id": 3,
+      "name": "Facilities",
+      "description": "Office facilities and maintenance",
+      "created_at": "2025-10-30T06:57:36.108788"
+    },
+    {
+      "id": 4,
+      "name": "IT",
+      "description": "Information Technology and systems",
+      "created_at": "2025-10-30T06:57:36.108798"
+    },
+    {
+      "id": 5,
+      "name": "Safety",
+      "description": "Workplace safety concerns",
+      "created_at": "2025-10-30T06:57:36.108807"
+    },
+    {
+      "id": 6,
+      "name": "Unclassified",
+      "description": "Complaints needing manual classification",
+      "created_at": "2025-10-30T06:57:36.108816"
+    },
+    {
+      "id": 8,
+      "name": "Marketing",
+      "description": null,
+      "created_at": "2025-11-06T04:02:22.640928"
+    }
+  ],
+  "audit_logs": [],
+  "reports": [
+    {
+      "id": 4,
+      "period": "weekly",
+      "from_date": "2025-10-27T04:49:08.045618",
+      "to_date": "2025-11-03T04:49:08.045618",
+      "summary": "This week, a total of 7 complaints were recorded, with 3 resolved, 3 pending, and 1 urgent. The category breakdown shows a mix of IT (2), Facilities (2), Payroll (1), and Unclassified (2) complaints. Urgent complaints were mainly related to IT and Payroll issues.",
+      "created_at": "2025-11-03T04:49:08.046338",
+      "download_url": null,
+      "html_content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <title>AI Weekly Report</title>\n    <style>\n      body { font-family: 'Inter', Arial, sans-serif; background-color: #f8fafc; color: #0f172a; margin: 0; padding: 32px; }\n      .card { background: white; border-radius: 16px; border: 1px solid #e2e8f0; padding: 28px; box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08); margin-bottom: 24px; }\n      .muted { color: #64748b; }\n      .badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 9999px; font-size: 12px; font-weight: 600; }\n      .badge-primary { background: rgba(59,130,246,0.12); color: #1d4ed8; }\n      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; margin-top: 20px; }\n      table { width: 100%; border-collapse: collapse; margin-top: 16px; }\n      th, td { border: 1px solid #e2e8f0; padding: 10px 12px; text-align: left; font-size: 13px; }\n      th { background-color: #f1f5f9; color: #0f172a; text-transform: uppercase; letter-spacing: 0.04em; }\n      ul { margin: 0; padding-left: 18px; }\n      h2 { margin: 0 0 8px; font-size: 20px; }\n      h3 { margin: 24px 0 12px; font-size: 16px; text-transform: uppercase; letter-spacing: 0.08em; color: #475569; }\n    </style>\n  </head>\n  <body>\n    <div class=\"card\">\n      <span class=\"badge badge-primary\">AI Generated</span>\n      <h2>Complaint Insight Report</h2>\n      <p class=\"muted\">Period: Oct 27, 2025 \u2192 Nov 03, 2025</p>\n      <p class=\"text-slate-700 leading-relaxed\">This week, a total of 7 complaints were recorded, with 3 resolved, 3 pending, and 1 urgent. The category breakdown shows a mix of IT (2), Facilities (2), Payroll (1), and Unclassified (2) complaints. Urgent complaints were mainly related to IT and Payroll issues.</p>\n      <div class=\"grid\">\n        <div>\n          <strong>Total Tickets</strong>\n          <p style=\"font-size: 28px; margin: 4px 0;\">7</p>\n          <p class=\"muted\">Resolved: 3 \u00b7 Pending: 3</p>\n        </div>\n        <div>\n          <strong>Urgent</strong>\n          <p style=\"font-size: 28px; margin: 4px 0;\">2</p>\n          <p class=\"muted\">Urgent share driven by IT.</p>\n        </div>\n        <div>\n          <strong>Top Categories</strong>\n          <ul><li class=\"flex items-center justify-between\"><span>IT</span><span class=\"font-semibold\">2</span></li><li class=\"flex items-center justify-between\"><span>Facilities</span><span class=\"font-semibold\">2</span></li><li class=\"flex items-center justify-between\"><span>Unclassified</span><span class=\"font-semibold\">2</span></li><li class=\"flex items-center justify-between\"><span>Payroll</span><span class=\"font-semibold\">1</span></li></ul>\n        </div>\n      </div>\n      <h3>Key Issues To Watch</h3>\n      <table>\n        <thead>\n          <tr><th>ID</th><th>Category</th><th>Status</th><th>Main Issue</th><th>Confidence</th></tr>\n        </thead>\n        <tbody><tr><td>#1</td><td>IT</td><td>In Progress</td><td>Laptop keyboard intermittently fails and VPN disconnects during calls.</td><td>100%</td></tr><tr><td>#2</td><td>Facilities</td><td>Pending</td><td>Air-conditioning on level 12 is not functioning and meeting rooms are too warm.</td><td>100%</td></tr><tr><td>#3</td><td>Payroll</td><td>Resolved</td><td>Salary for September is short by two days and reimbursement is missing.</td><td>100%</td></tr><tr><td>#4</td><td>Facilities</td><td>Resolved</td><td>New collaboration space looks amazing and boosts team morale.</td><td>100%</td></tr><tr><td>#5</td><td>IT</td><td>Pending</td><td>Computer cannot start.</td><td>100%</td></tr><tr><td>#6</td><td>Unclassified</td><td>Pending</td><td>No issue description available.</td><td>50%</td></tr><tr><td>#7</td><td>Unclassified</td><td>Pending</td><td>No issue description available.</td><td>50%</td></tr></tbody>\n      </table>\n      <h3>Preventative Actions</h3>\n      <ul><li>IT Team: Regularly update and patch laptops to prevent keyboard failures and VPN disconnections.</li><li>Facilities Team: Perform routine maintenance on air-conditioning units to prevent system failures.</li><li>Payroll Team: Double-check salary and reimbursement calculations to prevent errors.</li><li>IT Team: Implement a backup system to prevent data loss in case of computer failures.</li><li>All Teams: Establish clear communication channels to ensure timely resolution of complaints.</li></ul>\n      <h3>Focus Areas Next Cycle</h3>\n      <ul><li>IT System Maintenance</li><li>Facilities Equipment Maintenance</li><li>Payroll Accuracy and Timeliness</li></ul>\n    </div>\n  </body>\n</html>",
+      "recipients": [],
+      "metadata": {
+        "generated_at": "2025-11-03T04:49:08.045934",
+        "period": "weekly",
+        "period_label": "Oct 27, 2025 \u2192 Nov 03, 2025",
+        "stats": {
+          "total": 7,
+          "total_complaints": 5,
+          "total_feedback": 2,
+          "resolved": 3,
+          "pending": 3,
+          "unclassified": 2,
+          "urgent": 2,
+          "by_kind": {
+            "complaint": 5,
+            "feedback": 2
+          },
+          "by_category": {
+            "IT": 2,
+            "Facilities": 2,
+            "Payroll": 1,
+            "Unclassified": 2
+          }
+        },
+        "summary_markdown": "This week, a total of 7 complaints were recorded, with 3 resolved, 3 pending, and 1 urgent. The category breakdown shows a mix of IT (2), Facilities (2), Payroll (1), and Unclassified (2) complaints. Urgent complaints were mainly related to IT and Payroll issues.",
+        "summary_plain": "This week, a total of 7 complaints were recorded, with 3 resolved, 3 pending, and 1 urgent. The category breakdown shows a mix of IT (2), Facilities (2), Payroll (1), and Unclassified (2) complaints. Urgent complaints were mainly related to IT and Payroll issues.",
+        "prevention_recommendations": [
+          "IT Team: Regularly update and patch laptops to prevent keyboard failures and VPN disconnections.",
+          "Facilities Team: Perform routine maintenance on air-conditioning units to prevent system failures.",
+          "Payroll Team: Double-check salary and reimbursement calculations to prevent errors.",
+          "IT Team: Implement a backup system to prevent data loss in case of computer failures.",
+          "All Teams: Establish clear communication channels to ensure timely resolution of complaints."
+        ],
+        "focus_areas": [
+          "IT System Maintenance",
+          "Facilities Equipment Maintenance",
+          "Payroll Accuracy and Timeliness"
+        ],
+        "key_issues": [
+          {
+            "complaint_id": 1,
+            "category": "IT",
+            "status": "In Progress",
+            "key_issue": "Laptop keyboard intermittently fails and VPN disconnects during calls.",
+            "probability": 1.0
+          },
+          {
+            "complaint_id": 2,
+            "category": "Facilities",
+            "status": "Pending",
+            "key_issue": "Air-conditioning on level 12 is not functioning and meeting rooms are too warm.",
+            "probability": 1.0
+          },
+          {
+            "complaint_id": 3,
+            "category": "Payroll",
+            "status": "Resolved",
+            "key_issue": "Salary for September is short by two days and reimbursement is missing.",
+            "probability": 1.0
+          },
+          {
+            "complaint_id": 4,
+            "category": "Facilities",
+            "status": "Resolved",
+            "key_issue": "New collaboration space looks amazing and boosts team morale.",
+            "probability": 1.0
+          },
+          {
+            "complaint_id": 5,
+            "category": "IT",
+            "status": "Pending",
+            "key_issue": "Computer cannot start.",
+            "probability": 1.0
+          },
+          {
+            "complaint_id": 6,
+            "category": "Unclassified",
+            "status": "Pending",
+            "key_issue": "No issue description available.",
+            "probability": 0.5
+          },
+          {
+            "complaint_id": 7,
+            "category": "Unclassified",
+            "status": "Pending",
+            "key_issue": "No issue description available.",
+            "probability": 0.5
+          }
+        ],
+        "top_categories": [
+          {
+            "category": "IT",
+            "count": 2
+          },
+          {
+            "category": "Facilities",
+            "count": 2
+          },
+          {
+            "category": "Unclassified",
+            "count": 2
+          },
+          {
+            "category": "Payroll",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "period": "weekly",
+      "from_date": "2025-10-27T05:44:33.708205",
+      "to_date": "2025-11-03T05:44:33.708205",
+      "summary": "This week, there were 7 complaints across various categories. The majority of complaints (57%) are pending, with 2 being urgent. IT and Facilities are the top categories, accounting for 43% of all complaints. Key issues include intermittent laptop keyboard failures, air-conditioning malfunctions, and urgent IT issues.",
+      "created_at": "2025-11-03T05:44:33.712125",
+      "download_url": null,
+      "html_content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <title>AI Weekly Report</title>\n    <style>\n      body { font-family: 'Inter', Arial, sans-serif; background-color: #f8fafc; color: #0f172a; margin: 0; padding: 32px; }\n      .card { background: white; border-radius: 16px; border: 1px solid #e2e8f0; padding: 28px; box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08); margin-bottom: 24px; }\n      .muted { color: #64748b; }\n      .badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 9999px; font-size: 12px; font-weight: 600; }\n      .badge-primary { background: rgba(59,130,246,0.12); color: #1d4ed8; }\n      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; margin-top: 20px; }\n      table { width: 100%; border-collapse: collapse; margin-top: 16px; }\n      th, td { border: 1px solid #e2e8f0; padding: 10px 12px; text-align: left; font-size: 13px; }\n      th { background-color: #f1f5f9; color: #0f172a; text-transform: uppercase; letter-spacing: 0.04em; }\n      ul { margin: 0; padding-left: 18px; }\n      h2 { margin: 0 0 8px; font-size: 20px; }\n      h3 { margin: 24px 0 12px; font-size: 16px; text-transform: uppercase; letter-spacing: 0.08em; color: #475569; }\n    </style>\n  </head>\n  <body>\n    <div class=\"card\">\n      <span class=\"badge badge-primary\">AI Generated</span>\n      <h2>Complaint Insight Report</h2>\n      <p class=\"muted\">Period: Oct 27, 2025 \u2192 Nov 03, 2025</p>\n      <p class=\"text-slate-700 leading-relaxed\">This week, there were 7 complaints across various categories. The majority of complaints (57%) are pending, with 2 being urgent. IT and Facilities are the top categories, accounting for 43% of all complaints. Key issues include intermittent laptop keyboard failures, air-conditioning malfunctions, and urgent IT issues.</p>\n      <div class=\"grid\">\n        <div>\n          <strong>Total Tickets</strong>\n          <p style=\"font-size: 28px; margin: 4px 0;\">7</p>\n          <p class=\"muted\">Resolved: 3 \u00b7 Pending: 3</p>\n        </div>\n        <div>\n          <strong>Urgent</strong>\n          <p style=\"font-size: 28px; margin: 4px 0;\">2</p>\n          <p class=\"muted\">Urgent share driven by IT.</p>\n        </div>\n        <div>\n          <strong>Top Categories</strong>\n          <ul><li class=\"flex items-center justify-between\"><span>IT</span><span class=\"font-semibold\">2</span></li><li class=\"flex items-center justify-between\"><span>Facilities</span><span class=\"font-semibold\">2</span></li><li class=\"flex items-center justify-between\"><span>Unclassified</span><span class=\"font-semibold\">2</span></li><li class=\"flex items-center justify-between\"><span>Payroll</span><span class=\"font-semibold\">1</span></li></ul>\n        </div>\n      </div>\n      <h3>Key Issues To Watch</h3>\n      <table>\n        <thead>\n          <tr><th>ID</th><th>Category</th><th>Status</th><th>Main Issue</th><th>Confidence</th></tr>\n        </thead>\n        <tbody><tr><td>#1</td><td>IT</td><td>In Progress</td><td>Laptop keyboard intermittently fails and VPN disconnects during calls.</td><td>90%</td></tr><tr><td>#2</td><td>Facilities</td><td>Pending</td><td>Air-conditioning on level 12 is not functioning and meeting rooms are too warm.</td><td>80%</td></tr><tr><td>#3</td><td>Payroll</td><td>Resolved</td><td>Salary for September is short by two days and reimbursement is missing.</td><td>95%</td></tr><tr><td>#4</td><td>Facilities</td><td>Resolved</td><td>New collaboration space looks amazing and boosts team morale.</td><td>70%</td></tr><tr><td>#5</td><td>IT</td><td>Pending</td><td>Computer cannot start.</td><td>85%</td></tr><tr><td>#6</td><td>Unclassified</td><td>Pending</td><td>Unclassified complaint.</td><td>20%</td></tr><tr><td>#7</td><td>Unclassified</td><td>Pending</td><td>Unclassified complaint.</td><td>20%</td></tr></tbody>\n      </table>\n      <h3>Preventative Actions</h3>\n      <ul><li>IT team should conduct regular maintenance checks on laptops to prevent keyboard failures.</li><li>Facilities team should inspect and repair air-conditioning units on level 12 to ensure optimal performance.</li><li>Payroll team should review and reconcile employee salaries to prevent short payments and missing reimbursements.</li><li>IT team should implement a backup system to prevent data loss in case of computer failures.</li><li>Facilities team should consider upgrading to a more efficient air-conditioning system to reduce energy consumption and improve comfort levels.</li></ul>\n      <h3>Focus Areas Next Cycle</h3>\n      <ul><li>IT Infrastructure Maintenance</li><li>Facilities Management and Maintenance</li><li>Payroll Accuracy and Reconciliation</li></ul>\n    </div>\n  </body>\n</html>",
+      "recipients": [],
+      "metadata": {
+        "generated_at": "2025-11-03T05:44:33.710992",
+        "period": "weekly",
+        "period_label": "Oct 27, 2025 \u2192 Nov 03, 2025",
+        "stats": {
+          "total": 7,
+          "total_complaints": 5,
+          "total_feedback": 2,
+          "resolved": 3,
+          "pending": 3,
+          "unclassified": 2,
+          "urgent": 2,
+          "by_kind": {
+            "complaint": 5,
+            "feedback": 2
+          },
+          "by_category": {
+            "IT": 2,
+            "Facilities": 2,
+            "Payroll": 1,
+            "Unclassified": 2
+          }
+        },
+        "summary_markdown": "This week, there were 7 complaints across various categories. The majority of complaints (57%) are pending, with 2 being urgent. IT and Facilities are the top categories, accounting for 43% of all complaints. Key issues include intermittent laptop keyboard failures, air-conditioning malfunctions, and urgent IT issues.",
+        "summary_plain": "This week, there were 7 complaints across various categories. The majority of complaints (57%) are pending, with 2 being urgent. IT and Facilities are the top categories, accounting for 43% of all complaints. Key issues include intermittent laptop keyboard failures, air-conditioning malfunctions, and urgent IT issues.",
+        "prevention_recommendations": [
+          "IT team should conduct regular maintenance checks on laptops to prevent keyboard failures.",
+          "Facilities team should inspect and repair air-conditioning units on level 12 to ensure optimal performance.",
+          "Payroll team should review and reconcile employee salaries to prevent short payments and missing reimbursements.",
+          "IT team should implement a backup system to prevent data loss in case of computer failures.",
+          "Facilities team should consider upgrading to a more efficient air-conditioning system to reduce energy consumption and improve comfort levels."
+        ],
+        "focus_areas": [
+          "IT Infrastructure Maintenance",
+          "Facilities Management and Maintenance",
+          "Payroll Accuracy and Reconciliation"
+        ],
+        "key_issues": [
+          {
+            "complaint_id": 1,
+            "category": "IT",
+            "status": "In Progress",
+            "key_issue": "Laptop keyboard intermittently fails and VPN disconnects during calls.",
+            "probability": 0.9
+          },
+          {
+            "complaint_id": 2,
+            "category": "Facilities",
+            "status": "Pending",
+            "key_issue": "Air-conditioning on level 12 is not functioning and meeting rooms are too warm.",
+            "probability": 0.8
+          },
+          {
+            "complaint_id": 3,
+            "category": "Payroll",
+            "status": "Resolved",
+            "key_issue": "Salary for September is short by two days and reimbursement is missing.",
+            "probability": 0.95
+          },
+          {
+            "complaint_id": 4,
+            "category": "Facilities",
+            "status": "Resolved",
+            "key_issue": "New collaboration space looks amazing and boosts team morale.",
+            "probability": 0.7
+          },
+          {
+            "complaint_id": 5,
+            "category": "IT",
+            "status": "Pending",
+            "key_issue": "Computer cannot start.",
+            "probability": 0.85
+          },
+          {
+            "complaint_id": 6,
+            "category": "Unclassified",
+            "status": "Pending",
+            "key_issue": "Unclassified complaint.",
+            "probability": 0.2
+          },
+          {
+            "complaint_id": 7,
+            "category": "Unclassified",
+            "status": "Pending",
+            "key_issue": "Unclassified complaint.",
+            "probability": 0.2
+          }
+        ],
+        "top_categories": [
+          {
+            "category": "IT",
+            "count": 2
+          },
+          {
+            "category": "Facilities",
+            "count": 2
+          },
+          {
+            "category": "Unclassified",
+            "count": 2
+          },
+          {
+            "category": "Payroll",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "period": "weekly",
+      "from_date": "2025-10-27T00:00:00",
+      "to_date": "2025-11-03T00:00:00",
+      "summary": "Weekly Complaint Report\nPeriod: 2025-10-27 \u2192 2025-11-03\n\nNew complaints: 6\nResolved: 6\nOpen backlog: 0\n\nDepartment metrics:\n- Facilities: total=2, resolved=2, pending=0, SLA breach=0.0%, reopen rate=0.0%, backlog age=0.0h\n- IT: total=2, resolved=2, pending=0, SLA breach=0.0%, reopen rate=0.0%, backlog age=0.0h\n- Payroll: total=1, resolved=1, pending=0, SLA breach=0.0%, reopen rate=0.0%, backlog age=0.0h\n- Unclassified: total=1, resolved=1, pending=0, SLA breach=0.0%, reopen rate=0.0%, backlog age=0.0h\n\nVisit the analytics dashboard for more details.",
+      "created_at": "2025-11-03T08:00:00.115404",
+      "download_url": null,
+      "html_content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <title>Weekly Complaint Report (2025-10-27 \u2192 2025-11-03)</title>\n    <style>\n      body {\n        margin: 0;\n        padding: 24px;\n        font-family: Arial, sans-serif;\n        background-color: #f8fafc;\n        color: #0f172a;\n      }\n      .container {\n        max-width: 640px;\n        margin: 0 auto;\n        background-color: #ffffff;\n        border-radius: 12px;\n        border: 1px solid #e2e8f0;\n        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);\n        overflow: hidden;\n      }\n      .header {\n        background: linear-gradient(135deg, #2563eb, #38bdf8);\n        padding: 28px;\n        color: white;\n      }\n      .header h1 {\n        margin: 0;\n        font-size: 22px;\n        font-weight: 700;\n      }\n      .content {\n        padding: 28px;\n        line-height: 1.6;\n      }\n      .footer {\n        padding: 20px 28px;\n        background-color: #f1f5f9;\n        color: #64748b;\n        font-size: 12px;\n        text-align: center;\n      }\n      .button {\n        display: inline-block;\n        padding: 12px 20px;\n        background-color: #2563eb;\n        color: white;\n        border-radius: 8px;\n        text-decoration: none;\n        font-weight: 600;\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"container\">\n      <div class=\"header\">\n        <h1>Weekly Complaint Report</h1>\n      </div>\n      <div class=\"content\">\n        \n      </div>\n      <div class=\"footer\">\n        <p>\n          This message was generated by the AI Complaint Management platform.\n          Please do not reply directly to this email.\n        </p>\n      </div>\n    </div>\n  </body>\n</html>",
+      "recipients": [],
+      "metadata": {}
+    },
+    {
+      "id": 7,
+      "period": "weekly",
+      "from_date": "2025-10-27T14:09:59.604361",
+      "to_date": "2025-11-03T14:09:59.604361",
+      "summary": "This week, we received a total of 7 complaints, with 6 resolved and 1 pending. The majority of complaints fell under the IT and Facilities categories, with 2 complaints each. Notably, 2 complaints were marked as urgent, highlighting the need for prompt attention to certain issues. Overall, the complaints suggest a need for improved technical support and infrastructure maintenance.",
+      "created_at": "2025-11-03T14:09:59.605281",
+      "download_url": null,
+      "html_content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <title>AI Weekly Report</title>\n    <style>\n      body { font-family: 'Inter', Arial, sans-serif; background-color: #f8fafc; color: #0f172a; margin: 0; padding: 32px; }\n      .card { background: white; border-radius: 16px; border: 1px solid #e2e8f0; padding: 28px; box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08); margin-bottom: 24px; }\n      .muted { color: #64748b; }\n      .badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 9999px; font-size: 12px; font-weight: 600; }\n      .badge-primary { background: rgba(59,130,246,0.12); color: #1d4ed8; }\n      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; margin-top: 20px; }\n      table { width: 100%; border-collapse: collapse; margin-top: 16px; }\n      th, td { border: 1px solid #e2e8f0; padding: 10px 12px; text-align: left; font-size: 13px; }\n      th { background-color: #f1f5f9; color: #0f172a; text-transform: uppercase; letter-spacing: 0.04em; }\n      ul { margin: 0; padding-left: 18px; }\n      h2 { margin: 0 0 8px; font-size: 20px; }\n      h3 { margin: 24px 0 12px; font-size: 16px; text-transform: uppercase; letter-spacing: 0.08em; color: #475569; }\n    </style>\n  </head>\n  <body>\n    <div class=\"card\">\n      <span class=\"badge badge-primary\">AI Generated</span>\n      <h2>Complaint Insight Report</h2>\n      <p class=\"muted\">Period: Oct 27, 2025 \u2192 Nov 03, 2025</p>\n      <p class=\"text-slate-700 leading-relaxed\">This week, we received a total of 7 complaints, with 6 resolved and 1 pending. The majority of complaints fell under the IT and Facilities categories, with 2 complaints each. Notably, 2 complaints were marked as urgent, highlighting the need for prompt attention to certain issues. Overall, the complaints suggest a need for improved technical support and infrastructure maintenance.</p>\n      <div class=\"grid\">\n        <div>\n          <strong>Total Tickets</strong>\n          <p style=\"font-size: 28px; margin: 4px 0;\">7</p>\n          <p class=\"muted\">Resolved: 6 \u00b7 Pending: 1</p>\n        </div>\n        <div>\n          <strong>Urgent</strong>\n          <p style=\"font-size: 28px; margin: 4px 0;\">2</p>\n          <p class=\"muted\">Urgent share driven by IT.</p>\n        </div>\n        <div>\n          <strong>Top Categories</strong>\n          <ul><li class=\"flex items-center justify-between\"><span>IT</span><span class=\"font-semibold\">2</span></li><li class=\"flex items-center justify-between\"><span>Facilities</span><span class=\"font-semibold\">2</span></li><li class=\"flex items-center justify-between\"><span>Unclassified</span><span class=\"font-semibold\">2</span></li><li class=\"flex items-center justify-between\"><span>Payroll</span><span class=\"font-semibold\">1</span></li></ul>\n        </div>\n      </div>\n      <h3>Key Issues To Watch</h3>\n      <table>\n        <thead>\n          <tr><th>ID</th><th>Category</th><th>Status</th><th>Main Issue</th><th>Confidence</th></tr>\n        </thead>\n        <tbody><tr><td>#1</td><td>IT</td><td>Resolved</td><td>Laptop keyboard intermittently fails and VPN disconnects during calls.</td><td>90%</td></tr><tr><td>#2</td><td>Facilities</td><td>Resolved</td><td>Air-conditioning on level 12 is not functioning and meeting rooms are too warm.</td><td>80%</td></tr><tr><td>#3</td><td>Payroll</td><td>Resolved</td><td>Salary for September is short by two days and reimbursement is missing.</td><td>90%</td></tr><tr><td>#4</td><td>Facilities</td><td>Resolved</td><td>Kudos to the facilities team for the new collaboration space.</td><td>80%</td></tr><tr><td>#5</td><td>IT</td><td>Resolved</td><td>Computer cannot start.</td><td>90%</td></tr><tr><td>#6</td><td>HR</td><td>Resolved</td><td>Unclassified complaint requires further investigation.</td><td>40%</td></tr><tr><td>#7</td><td>Safety</td><td>Pending</td><td>Unclassified complaint related to workplace safety.</td><td>50%</td></tr></tbody>\n      </table>\n      <h3>Preventative Actions</h3>\n      <ul><li>Conduct regular IT audits to identify and address technical issues proactively.</li><li>Develop a preventive maintenance schedule for facilities equipment, including air-conditioning units.</li><li>Implement a quality control process for payroll to minimize errors and ensure timely reimbursement.</li><li>Provide training for facilities staff to enhance their responsiveness to user feedback and concerns.</li><li>Establish a clear protocol for reporting and addressing urgent complaints.</li></ul>\n      <h3>Focus Areas Next Cycle</h3>\n      <ul><li>IT Infrastructure and Support</li><li>Facilities Maintenance and Upkeep</li><li>Payroll Processing and Quality Control</li></ul>\n    </div>\n  </body>\n</html>",
+      "recipients": [],
+      "metadata": {
+        "generated_at": "2025-11-03T14:09:59.604801",
+        "period": "weekly",
+        "period_label": "Oct 27, 2025 \u2192 Nov 03, 2025",
+        "stats": {
+          "total": 7,
+          "total_complaints": 5,
+          "total_feedback": 2,
+          "resolved": 6,
+          "pending": 1,
+          "unclassified": 2,
+          "urgent": 2,
+          "by_kind": {
+            "complaint": 5,
+            "feedback": 2
+          },
+          "by_category": {
+            "IT": 2,
+            "Facilities": 2,
+            "Payroll": 1,
+            "Unclassified": 2
+          }
+        },
+        "summary_markdown": "This week, we received a total of 7 complaints, with 6 resolved and 1 pending. The majority of complaints fell under the IT and Facilities categories, with 2 complaints each. Notably, 2 complaints were marked as urgent, highlighting the need for prompt attention to certain issues. Overall, the complaints suggest a need for improved technical support and infrastructure maintenance.",
+        "summary_plain": "This week, we received a total of 7 complaints, with 6 resolved and 1 pending. The majority of complaints fell under the IT and Facilities categories, with 2 complaints each. Notably, 2 complaints were marked as urgent, highlighting the need for prompt attention to certain issues. Overall, the complaints suggest a need for improved technical support and infrastructure maintenance.",
+        "prevention_recommendations": [
+          "Conduct regular IT audits to identify and address technical issues proactively.",
+          "Develop a preventive maintenance schedule for facilities equipment, including air-conditioning units.",
+          "Implement a quality control process for payroll to minimize errors and ensure timely reimbursement.",
+          "Provide training for facilities staff to enhance their responsiveness to user feedback and concerns.",
+          "Establish a clear protocol for reporting and addressing urgent complaints."
+        ],
+        "focus_areas": [
+          "IT Infrastructure and Support",
+          "Facilities Maintenance and Upkeep",
+          "Payroll Processing and Quality Control"
+        ],
+        "key_issues": [
+          {
+            "complaint_id": 1,
+            "category": "IT",
+            "status": "Resolved",
+            "key_issue": "Laptop keyboard intermittently fails and VPN disconnects during calls.",
+            "probability": 0.9
+          },
+          {
+            "complaint_id": 2,
+            "category": "Facilities",
+            "status": "Resolved",
+            "key_issue": "Air-conditioning on level 12 is not functioning and meeting rooms are too warm.",
+            "probability": 0.8
+          },
+          {
+            "complaint_id": 3,
+            "category": "Payroll",
+            "status": "Resolved",
+            "key_issue": "Salary for September is short by two days and reimbursement is missing.",
+            "probability": 0.9
+          },
+          {
+            "complaint_id": 4,
+            "category": "Facilities",
+            "status": "Resolved",
+            "key_issue": "Kudos to the facilities team for the new collaboration space.",
+            "probability": 0.8
+          },
+          {
+            "complaint_id": 5,
+            "category": "IT",
+            "status": "Resolved",
+            "key_issue": "Computer cannot start.",
+            "probability": 0.9
+          },
+          {
+            "complaint_id": 6,
+            "category": "HR",
+            "status": "Resolved",
+            "key_issue": "Unclassified complaint requires further investigation.",
+            "probability": 0.4
+          },
+          {
+            "complaint_id": 7,
+            "category": "Safety",
+            "status": "Pending",
+            "key_issue": "Unclassified complaint related to workplace safety.",
+            "probability": 0.5
+          }
+        ],
+        "top_categories": [
+          {
+            "category": "IT",
+            "count": 2
+          },
+          {
+            "category": "Facilities",
+            "count": 2
+          },
+          {
+            "category": "Unclassified",
+            "count": 2
+          },
+          {
+            "category": "Payroll",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "period": "weekly",
+      "from_date": "2025-10-29T01:08:27.517496",
+      "to_date": "2025-11-05T01:08:27.517496",
+      "summary": "This week, we received a total of 9 complaints, with 6 resolved, 2 pending, and 3 marked as urgent. The most common categories were IT and Facilities, each with 3 complaints. Notably, Payroll had 1 complaint, and there were 2 unclassified complaints. Key issues included IT hardware failures, facilities maintenance, and payroll discrepancies.",
+      "created_at": "2025-11-05T01:08:27.518391",
+      "download_url": null,
+      "html_content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <title>AI Weekly Report</title>\n    <style>\n      body { font-family: 'Inter', Arial, sans-serif; background-color: #f8fafc; color: #0f172a; margin: 0; padding: 32px; }\n      .card { background: white; border-radius: 16px; border: 1px solid #e2e8f0; padding: 28px; box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08); margin-bottom: 24px; }\n      .muted { color: #64748b; }\n      .badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 9999px; font-size: 12px; font-weight: 600; }\n      .badge-primary { background: rgba(59,130,246,0.12); color: #1d4ed8; }\n      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; margin-top: 20px; }\n      table { width: 100%; border-collapse: collapse; margin-top: 16px; }\n      th, td { border: 1px solid #e2e8f0; padding: 10px 12px; text-align: left; font-size: 13px; }\n      th { background-color: #f1f5f9; color: #0f172a; text-transform: uppercase; letter-spacing: 0.04em; }\n      ul { margin: 0; padding-left: 18px; }\n      h2 { margin: 0 0 8px; font-size: 20px; }\n      h3 { margin: 24px 0 12px; font-size: 16px; text-transform: uppercase; letter-spacing: 0.08em; color: #475569; }\n    </style>\n  </head>\n  <body>\n    <div class=\"card\">\n      <span class=\"badge badge-primary\">AI Generated</span>\n      <h2>Complaint Insight Report</h2>\n      <p class=\"muted\">Period: Oct 29, 2025 \u2192 Nov 05, 2025</p>\n      <p class=\"text-slate-700 leading-relaxed\">This week, we received a total of 9 complaints, with 6 resolved, 2 pending, and 3 marked as urgent. The most common categories were IT and Facilities, each with 3 complaints. Notably, Payroll had 1 complaint, and there were 2 unclassified complaints. Key issues included IT hardware failures, facilities maintenance, and payroll discrepancies.</p>\n      <div class=\"grid\">\n        <div>\n          <strong>Total Tickets</strong>\n          <p style=\"font-size: 28px; margin: 4px 0;\">9</p>\n          <p class=\"muted\">Resolved: 6 \u00b7 Pending: 2</p>\n        </div>\n        <div>\n          <strong>Urgent</strong>\n          <p style=\"font-size: 28px; margin: 4px 0;\">3</p>\n          <p class=\"muted\">Urgent share driven by IT.</p>\n        </div>\n        <div>\n          <strong>Top Categories</strong>\n          <ul><li class=\"flex items-center justify-between\"><span>IT</span><span class=\"font-semibold\">3</span></li><li class=\"flex items-center justify-between\"><span>Facilities</span><span class=\"font-semibold\">3</span></li><li class=\"flex items-center justify-between\"><span>Unclassified</span><span class=\"font-semibold\">2</span></li><li class=\"flex items-center justify-between\"><span>Payroll</span><span class=\"font-semibold\">1</span></li></ul>\n        </div>\n      </div>\n      <h3>Key Issues To Watch</h3>\n      <table>\n        <thead>\n          <tr><th>ID</th><th>Category</th><th>Status</th><th>Main Issue</th><th>Confidence</th></tr>\n        </thead>\n        <tbody><tr><td>#1</td><td>IT</td><td>Resolved</td><td>Laptop keyboard intermittently fails and VPN disconnects during calls.</td><td>90%</td></tr><tr><td>#2</td><td>Facilities</td><td>Resolved</td><td>Air-conditioning on level 12 is not functioning and meeting rooms are too warm.</td><td>80%</td></tr><tr><td>#3</td><td>Payroll</td><td>Resolved</td><td>Salary for September is short by two days and reimbursement is missing.</td><td>95%</td></tr><tr><td>#4</td><td>Facilities</td><td>Resolved</td><td>Kudos to the facilities team for the new collaboration space.</td><td>70%</td></tr><tr><td>#5</td><td>IT</td><td>Resolved</td><td>Computer cannot start.</td><td>90%</td></tr><tr><td>#6</td><td>IT</td><td>Resolved</td><td>Unknown IT issue, details not provided.</td><td>60%</td></tr><tr><td>#7</td><td>Facilities</td><td>Pending</td><td>Unknown facilities issue, details not provided.</td><td>50%</td></tr><tr><td>#8</td><td>HR</td><td>Pending</td><td>Unknown HR issue, details not provided.</td><td>40%</td></tr></tbody>\n      </table>\n      <h3>Preventative Actions</h3>\n      <ul><li>Implement regular IT hardware checks to prevent intermittent failures</li><li>Conduct routine facilities maintenance to ensure proper functioning of air-conditioning and other essential systems</li><li>Review payroll processes to prevent discrepancies and ensure timely reimbursement</li><li>Provide training to facilities team on collaboration space design and maintenance</li><li>Establish a clear protocol for reporting and addressing urgent complaints</li></ul>\n      <h3>Focus Areas Next Cycle</h3>\n      <ul><li>IT Hardware Maintenance</li><li>Facilities Maintenance and Upkeep</li><li>Payroll Process Review and Optimization</li></ul>\n    </div>\n  </body>\n</html>",
+      "recipients": [],
+      "metadata": {
+        "generated_at": "2025-11-05T01:08:27.518002",
+        "period": "weekly",
+        "period_label": "Oct 29, 2025 \u2192 Nov 05, 2025",
+        "stats": {
+          "total": 9,
+          "total_complaints": 7,
+          "total_feedback": 2,
+          "resolved": 6,
+          "pending": 2,
+          "in_progress": 1,
+          "unclassified": 2,
+          "urgent": 3,
+          "by_kind": {
+            "complaint": 7,
+            "feedback": 2
+          },
+          "by_category": {
+            "IT": 3,
+            "Facilities": 3,
+            "Payroll": 1,
+            "Unclassified": 2
+          }
+        },
+        "summary_markdown": "This week, we received a total of 9 complaints, with 6 resolved, 2 pending, and 3 marked as urgent. The most common categories were IT and Facilities, each with 3 complaints. Notably, Payroll had 1 complaint, and there were 2 unclassified complaints. Key issues included IT hardware failures, facilities maintenance, and payroll discrepancies.",
+        "summary_plain": "This week, we received a total of 9 complaints, with 6 resolved, 2 pending, and 3 marked as urgent. The most common categories were IT and Facilities, each with 3 complaints. Notably, Payroll had 1 complaint, and there were 2 unclassified complaints. Key issues included IT hardware failures, facilities maintenance, and payroll discrepancies.",
+        "prevention_recommendations": [
+          "Implement regular IT hardware checks to prevent intermittent failures",
+          "Conduct routine facilities maintenance to ensure proper functioning of air-conditioning and other essential systems",
+          "Review payroll processes to prevent discrepancies and ensure timely reimbursement",
+          "Provide training to facilities team on collaboration space design and maintenance",
+          "Establish a clear protocol for reporting and addressing urgent complaints"
+        ],
+        "focus_areas": [
+          "IT Hardware Maintenance",
+          "Facilities Maintenance and Upkeep",
+          "Payroll Process Review and Optimization"
+        ],
+        "key_issues": [
+          {
+            "complaint_id": 1,
+            "category": "IT",
+            "status": "Resolved",
+            "key_issue": "Laptop keyboard intermittently fails and VPN disconnects during calls.",
+            "probability": 0.9
+          },
+          {
+            "complaint_id": 2,
+            "category": "Facilities",
+            "status": "Resolved",
+            "key_issue": "Air-conditioning on level 12 is not functioning and meeting rooms are too warm.",
+            "probability": 0.8
+          },
+          {
+            "complaint_id": 3,
+            "category": "Payroll",
+            "status": "Resolved",
+            "key_issue": "Salary for September is short by two days and reimbursement is missing.",
+            "probability": 0.95
+          },
+          {
+            "complaint_id": 4,
+            "category": "Facilities",
+            "status": "Resolved",
+            "key_issue": "Kudos to the facilities team for the new collaboration space.",
+            "probability": 0.7
+          },
+          {
+            "complaint_id": 5,
+            "category": "IT",
+            "status": "Resolved",
+            "key_issue": "Computer cannot start.",
+            "probability": 0.9
+          },
+          {
+            "complaint_id": 6,
+            "category": "IT",
+            "status": "Resolved",
+            "key_issue": "Unknown IT issue, details not provided.",
+            "probability": 0.6
+          },
+          {
+            "complaint_id": 7,
+            "category": "Facilities",
+            "status": "Pending",
+            "key_issue": "Unknown facilities issue, details not provided.",
+            "probability": 0.5
+          },
+          {
+            "complaint_id": 8,
+            "category": "HR",
+            "status": "Pending",
+            "key_issue": "Unknown HR issue, details not provided.",
+            "probability": 0.4
+          },
+          {
+            "complaint_id": 9,
+            "category": "Unclassified",
+            "status": "In Progress",
+            "key_issue": "Unknown issue, details not provided.",
+            "probability": 0.2
+          }
+        ],
+        "top_categories": [
+          {
+            "category": "IT",
+            "count": 3
+          },
+          {
+            "category": "Facilities",
+            "count": 3
+          },
+          {
+            "category": "Unclassified",
+            "count": 2
+          },
+          {
+            "category": "Payroll",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "period": "weekly",
+      "from_date": "2025-10-30T03:39:15.261379",
+      "to_date": "2025-11-06T03:39:15.261379",
+      "summary": "This week, we received a total of 9 complaints, with 6 resolved, 2 pending, and 3 marked as urgent. The majority of complaints fell under IT and Facilities categories, with 3 complaints each. Notably, 2 complaints were initially unclassified, but upon review, they have been categorized with a best-guess approach. Key issues include IT hardware failures, facilities maintenance, and payroll discrepancies. To improve, we recommend proactive IT asset management, regular facilities inspections, and enhanced payroll processing checks.",
+      "created_at": "2025-11-06T03:39:15.261826",
+      "download_url": null,
+      "html_content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <title>AI Weekly Report</title>\n    <style>\n      body { font-family: 'Inter', Arial, sans-serif; background-color: #f8fafc; color: #0f172a; margin: 0; padding: 32px; }\n      .card { background: white; border-radius: 16px; border: 1px solid #e2e8f0; padding: 28px; box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08); margin-bottom: 24px; }\n      .muted { color: #64748b; }\n      .badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 9999px; font-size: 12px; font-weight: 600; }\n      .badge-primary { background: rgba(59,130,246,0.12); color: #1d4ed8; }\n      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; margin-top: 20px; }\n      table { width: 100%; border-collapse: collapse; margin-top: 16px; }\n      th, td { border: 1px solid #e2e8f0; padding: 10px 12px; text-align: left; font-size: 13px; }\n      th { background-color: #f1f5f9; color: #0f172a; text-transform: uppercase; letter-spacing: 0.04em; }\n      ul { margin: 0; padding-left: 18px; }\n      h2 { margin: 0 0 8px; font-size: 20px; }\n      h3 { margin: 24px 0 12px; font-size: 16px; text-transform: uppercase; letter-spacing: 0.08em; color: #475569; }\n    </style>\n  </head>\n  <body>\n    <div class=\"card\">\n      <span class=\"badge badge-primary\">AI Generated</span>\n      <h2>Complaint Insight Report</h2>\n      <p class=\"muted\">Period: Oct 30, 2025 \u2192 Nov 06, 2025</p>\n      <p class=\"text-slate-700 leading-relaxed\">This week, we received a total of 9 complaints, with 6 resolved, 2 pending, and 3 marked as urgent. The majority of complaints fell under IT and Facilities categories, with 3 complaints each. Notably, 2 complaints were initially unclassified, but upon review, they have been categorized with a best-guess approach. Key issues include IT hardware failures, facilities maintenance, and payroll discrepancies. To improve, we recommend proactive IT asset management, regular facilities inspections, and enhanced payroll processing checks.</p>\n      <div class=\"grid\">\n        <div>\n          <strong>Total Tickets</strong>\n          <p style=\"font-size: 28px; margin: 4px 0;\">9</p>\n          <p class=\"muted\">Resolved: 6 \u00b7 Pending: 2</p>\n        </div>\n        <div>\n          <strong>Urgent</strong>\n          <p style=\"font-size: 28px; margin: 4px 0;\">3</p>\n          <p class=\"muted\">Urgent share driven by IT.</p>\n        </div>\n        <div>\n          <strong>Top Categories</strong>\n          <ul><li class=\"flex items-center justify-between\"><span>IT</span><span class=\"font-semibold\">3</span></li><li class=\"flex items-center justify-between\"><span>Facilities</span><span class=\"font-semibold\">3</span></li><li class=\"flex items-center justify-between\"><span>Unclassified</span><span class=\"font-semibold\">2</span></li><li class=\"flex items-center justify-between\"><span>Payroll</span><span class=\"font-semibold\">1</span></li></ul>\n        </div>\n      </div>\n      <h3>Key Issues To Watch</h3>\n      <table>\n        <thead>\n          <tr><th>ID</th><th>Category</th><th>Status</th><th>Main Issue</th><th>Confidence</th></tr>\n        </thead>\n        <tbody><tr><td>#1</td><td>IT</td><td>Resolved</td><td>Laptop keyboard intermittently fails and VPN disconnects during calls.</td><td>90%</td></tr><tr><td>#2</td><td>Facilities</td><td>Resolved</td><td>Air-conditioning on level 12 is not functioning and meeting rooms are too warm.</td><td>80%</td></tr><tr><td>#3</td><td>Payroll</td><td>Resolved</td><td>Salary for September is short by two days and reimbursement is missing.</td><td>95%</td></tr><tr><td>#4</td><td>Facilities</td><td>Resolved</td><td>Kudos to the facilities team for the new collaboration space.</td><td>70%</td></tr><tr><td>#5</td><td>IT</td><td>Resolved</td><td>Computer cannot start.</td><td>90%</td></tr><tr><td>#6</td><td>IT</td><td>Resolved</td><td>Unknown IT issue, details not provided.</td><td>60%</td></tr><tr><td>#7</td><td>Facilities</td><td>Pending</td><td>Unknown facilities issue, details not provided.</td><td>50%</td></tr><tr><td>#8</td><td>HR</td><td>Pending</td><td>Unknown HR issue, details not provided.</td><td>40%</td></tr></tbody>\n      </table>\n      <h3>Preventative Actions</h3>\n      <ul><li>Implement proactive IT asset management to reduce hardware failure rates</li><li>Schedule regular facilities inspections to identify and address maintenance issues before they become major problems</li><li>Enhance payroll processing checks to prevent discrepancies and ensure timely reimbursement</li><li>Provide training to staff on how to properly report and categorize complaints to improve data accuracy</li></ul>\n      <h3>Focus Areas Next Cycle</h3>\n      <ul><li>IT Hardware Maintenance and Support</li><li>Facilities Management and Maintenance</li><li>Payroll Processing and Compliance</li></ul>\n    </div>\n  </body>\n</html>",
+      "recipients": [],
+      "metadata": {
+        "generated_at": "2025-11-06T03:39:15.261739",
+        "period": "weekly",
+        "period_label": "Oct 30, 2025 \u2192 Nov 06, 2025",
+        "stats": {
+          "total": 9,
+          "total_complaints": 7,
+          "total_feedback": 2,
+          "resolved": 6,
+          "pending": 2,
+          "in_progress": 1,
+          "unclassified": 2,
+          "urgent": 3,
+          "by_kind": {
+            "complaint": 7,
+            "feedback": 2
+          },
+          "by_category": {
+            "IT": 3,
+            "Facilities": 3,
+            "Payroll": 1,
+            "Unclassified": 2
+          }
+        },
+        "summary_markdown": "This week, we received a total of 9 complaints, with 6 resolved, 2 pending, and 3 marked as urgent. The majority of complaints fell under IT and Facilities categories, with 3 complaints each. Notably, 2 complaints were initially unclassified, but upon review, they have been categorized with a best-guess approach. Key issues include IT hardware failures, facilities maintenance, and payroll discrepancies. To improve, we recommend proactive IT asset management, regular facilities inspections, and enhanced payroll processing checks.",
+        "summary_plain": "This week, we received a total of 9 complaints, with 6 resolved, 2 pending, and 3 marked as urgent. The majority of complaints fell under IT and Facilities categories, with 3 complaints each. Notably, 2 complaints were initially unclassified, but upon review, they have been categorized with a best-guess approach. Key issues include IT hardware failures, facilities maintenance, and payroll discrepancies. To improve, we recommend proactive IT asset management, regular facilities inspections, and enhanced payroll processing checks.",
+        "prevention_recommendations": [
+          "Implement proactive IT asset management to reduce hardware failure rates",
+          "Schedule regular facilities inspections to identify and address maintenance issues before they become major problems",
+          "Enhance payroll processing checks to prevent discrepancies and ensure timely reimbursement",
+          "Provide training to staff on how to properly report and categorize complaints to improve data accuracy"
+        ],
+        "focus_areas": [
+          "IT Hardware Maintenance and Support",
+          "Facilities Management and Maintenance",
+          "Payroll Processing and Compliance"
+        ],
+        "key_issues": [
+          {
+            "complaint_id": 1,
+            "category": "IT",
+            "status": "Resolved",
+            "key_issue": "Laptop keyboard intermittently fails and VPN disconnects during calls.",
+            "probability": 0.9
+          },
+          {
+            "complaint_id": 2,
+            "category": "Facilities",
+            "status": "Resolved",
+            "key_issue": "Air-conditioning on level 12 is not functioning and meeting rooms are too warm.",
+            "probability": 0.8
+          },
+          {
+            "complaint_id": 3,
+            "category": "Payroll",
+            "status": "Resolved",
+            "key_issue": "Salary for September is short by two days and reimbursement is missing.",
+            "probability": 0.95
+          },
+          {
+            "complaint_id": 4,
+            "category": "Facilities",
+            "status": "Resolved",
+            "key_issue": "Kudos to the facilities team for the new collaboration space.",
+            "probability": 0.7
+          },
+          {
+            "complaint_id": 5,
+            "category": "IT",
+            "status": "Resolved",
+            "key_issue": "Computer cannot start.",
+            "probability": 0.9
+          },
+          {
+            "complaint_id": 6,
+            "category": "IT",
+            "status": "Resolved",
+            "key_issue": "Unknown IT issue, details not provided.",
+            "probability": 0.6
+          },
+          {
+            "complaint_id": 7,
+            "category": "Facilities",
+            "status": "Pending",
+            "key_issue": "Unknown facilities issue, details not provided.",
+            "probability": 0.5
+          },
+          {
+            "complaint_id": 8,
+            "category": "HR",
+            "status": "Pending",
+            "key_issue": "Unknown HR issue, details not provided.",
+            "probability": 0.4
+          },
+          {
+            "complaint_id": 9,
+            "category": "Unclassified",
+            "status": "In Progress",
+            "key_issue": "Unknown issue, details not provided.",
+            "probability": 0.3
+          }
+        ],
+        "top_categories": [
+          {
+            "category": "IT",
+            "count": 3
+          },
+          {
+            "category": "Facilities",
+            "count": 3
+          },
+          {
+            "category": "Unclassified",
+            "count": 2
+          },
+          {
+            "category": "Payroll",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "period": "weekly",
+      "from_date": "2025-11-03T13:49:53.102751",
+      "to_date": "2025-11-10T13:49:53.102751",
+      "summary": "Weekly Complaints Summary The past week saw a total of 12 complaints, with 6 resolved, 5 pending, and 3 marked as urgent. The majority of complaints fell under the Facilities category, followed by IT and Unclassified. Notably, complaints related to IT issues, such as laptop and computer malfunctions, were prominent, alongside concerns about facilities and payroll discrepancies.",
+      "created_at": "2025-11-10T13:49:53.104508",
+      "download_url": null,
+      "html_content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <title>AI Weekly Report</title>\n    <style>\n      body { font-family: 'Inter', Arial, sans-serif; background-color: #f8fafc; color: #0f172a; margin: 0; padding: 32px; }\n      .card { background: white; border-radius: 16px; border: 1px solid #e2e8f0; padding: 28px; box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08); margin-bottom: 24px; }\n      .muted { color: #64748b; }\n      .badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 9999px; font-size: 12px; font-weight: 600; }\n      .badge-primary { background: rgba(59,130,246,0.12); color: #1d4ed8; }\n      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; margin-top: 20px; }\n      table { width: 100%; border-collapse: collapse; margin-top: 16px; }\n      th, td { border: 1px solid #e2e8f0; padding: 10px 12px; text-align: left; font-size: 13px; }\n      th { background-color: #f1f5f9; color: #0f172a; text-transform: uppercase; letter-spacing: 0.04em; }\n      ul { margin: 0; padding-left: 18px; }\n      h2 { margin: 0 0 8px; font-size: 20px; }\n      h3 { margin: 24px 0 12px; font-size: 16px; text-transform: uppercase; letter-spacing: 0.08em; color: #475569; }\n    </style>\n  </head>\n  <body>\n    <div class=\"card\">\n      <span class=\"badge badge-primary\">AI Generated</span>\n      <h2>Complaint Insight Report</h2>\n      <p class=\"muted\">Period: Nov 03, 2025 \u2192 Nov 10, 2025</p>\n      <p class=\"text-slate-700 leading-relaxed\"># Weekly Complaints Summary</p><p class=\"text-slate-700 leading-relaxed\">The past week saw a total of 12 complaints, with 6 resolved, 5 pending, and 3 marked as urgent. The majority of complaints fell under the Facilities category, followed by IT and Unclassified. Notably, complaints related to IT issues, such as laptop and computer malfunctions, were prominent, alongside concerns about facilities and payroll discrepancies.</p>\n      <div class=\"grid\">\n        <div>\n          <strong>Total Tickets</strong>\n          <p style=\"font-size: 28px; margin: 4px 0;\">12</p>\n          <p class=\"muted\">Resolved: 6 \u00b7 Pending: 5</p>\n        </div>\n        <div>\n          <strong>Urgent</strong>\n          <p style=\"font-size: 28px; margin: 4px 0;\">3</p>\n          <p class=\"muted\">Urgent share driven by Facilities.</p>\n        </div>\n        <div>\n          <strong>Top Categories</strong>\n          <ul><li class=\"flex items-center justify-between\"><span>Facilities</span><span class=\"font-semibold\">5</span></li><li class=\"flex items-center justify-between\"><span>IT</span><span class=\"font-semibold\">3</span></li><li class=\"flex items-center justify-between\"><span>Unclassified</span><span class=\"font-semibold\">3</span></li><li class=\"flex items-center justify-between\"><span>Payroll</span><span class=\"font-semibold\">1</span></li></ul>\n        </div>\n      </div>\n      <h3>Key Issues To Watch</h3>\n      <table>\n        <thead>\n          <tr><th>ID</th><th>Category</th><th>Status</th><th>Main Issue</th><th>Confidence</th></tr>\n        </thead>\n        <tbody><tr><td>#1</td><td>IT</td><td>Resolved</td><td>Laptop keyboard intermittently fails and VPN disconnects during calls.</td><td>90%</td></tr><tr><td>#2</td><td>Facilities</td><td>Resolved</td><td>Air-conditioning on level 12 is not functioning and meeting rooms are too warm.</td><td>95%</td></tr><tr><td>#3</td><td>Payroll</td><td>Resolved</td><td>Salary for September is short by two days and reimbursement is missing.</td><td>80%</td></tr><tr><td>#4</td><td>Facilities</td><td>Resolved</td><td>Kudos to the facilities team for the new collaboration space.</td><td>70%</td></tr><tr><td>#5</td><td>IT</td><td>Resolved</td><td>Computer cannot start.</td><td>85%</td></tr><tr><td>#6</td><td>Facilities</td><td>Resolved</td><td>Elevator on level 5 is not working properly.</td><td>60%</td></tr><tr><td>#7</td><td>Unclassified</td><td>Pending</td><td>Noise levels in the open office space are too high.</td><td>40%</td></tr><tr><td>#8</td><td>IT</td><td>Pending</td><td>Internet connection is down in the entire building.</td><td>80%</td></tr></tbody>\n      </table>\n      <h3>Preventative Actions</h3>\n      <ul><li>Conduct regular IT equipment maintenance checks to prevent malfunctions.</li><li>Implement a preventive maintenance schedule for facilities equipment, such as air-conditioning and elevators.</li><li>Review payroll processes to ensure accuracy and timeliness of salary payments and reimbursements.</li><li>Provide training to facilities staff on prompt response to and resolution of complaints.</li><li>Consider conducting noise level assessments in the open office space to identify potential solutions.</li></ul>\n      <h3>Focus Areas Next Cycle</h3>\n      <ul><li>IT Infrastructure and Support</li><li>Facilities Maintenance and Management</li><li>Payroll Process Optimization</li></ul>\n    </div>\n  </body>\n</html>",
+      "recipients": [],
+      "metadata": {
+        "generated_at": "2025-11-10T13:49:53.104193",
+        "period": "weekly",
+        "period_label": "Nov 03, 2025 \u2192 Nov 10, 2025",
+        "stats": {
+          "total": 12,
+          "total_complaints": 9,
+          "total_feedback": 3,
+          "resolved": 6,
+          "pending": 5,
+          "in_progress": 1,
+          "unclassified": 3,
+          "urgent": 3,
+          "by_kind": {
+            "complaint": 9,
+            "feedback": 3
+          },
+          "by_category": {
+            "IT": 3,
+            "Facilities": 5,
+            "Payroll": 1,
+            "Unclassified": 3
+          }
+        },
+        "summary_markdown": "# Weekly Complaints Summary\nThe past week saw a total of 12 complaints, with 6 resolved, 5 pending, and 3 marked as urgent. The majority of complaints fell under the Facilities category, followed by IT and Unclassified. Notably, complaints related to IT issues, such as laptop and computer malfunctions, were prominent, alongside concerns about facilities and payroll discrepancies.",
+        "summary_plain": "Weekly Complaints Summary The past week saw a total of 12 complaints, with 6 resolved, 5 pending, and 3 marked as urgent. The majority of complaints fell under the Facilities category, followed by IT and Unclassified. Notably, complaints related to IT issues, such as laptop and computer malfunctions, were prominent, alongside concerns about facilities and payroll discrepancies.",
+        "prevention_recommendations": [
+          "Conduct regular IT equipment maintenance checks to prevent malfunctions.",
+          "Implement a preventive maintenance schedule for facilities equipment, such as air-conditioning and elevators.",
+          "Review payroll processes to ensure accuracy and timeliness of salary payments and reimbursements.",
+          "Provide training to facilities staff on prompt response to and resolution of complaints.",
+          "Consider conducting noise level assessments in the open office space to identify potential solutions."
+        ],
+        "focus_areas": [
+          "IT Infrastructure and Support",
+          "Facilities Maintenance and Management",
+          "Payroll Process Optimization"
+        ],
+        "key_issues": [
+          {
+            "complaint_id": 1,
+            "category": "IT",
+            "status": "Resolved",
+            "key_issue": "Laptop keyboard intermittently fails and VPN disconnects during calls.",
+            "probability": 0.9
+          },
+          {
+            "complaint_id": 2,
+            "category": "Facilities",
+            "status": "Resolved",
+            "key_issue": "Air-conditioning on level 12 is not functioning and meeting rooms are too warm.",
+            "probability": 0.95
+          },
+          {
+            "complaint_id": 3,
+            "category": "Payroll",
+            "status": "Resolved",
+            "key_issue": "Salary for September is short by two days and reimbursement is missing.",
+            "probability": 0.8
+          },
+          {
+            "complaint_id": 4,
+            "category": "Facilities",
+            "status": "Resolved",
+            "key_issue": "Kudos to the facilities team for the new collaboration space.",
+            "probability": 0.7
+          },
+          {
+            "complaint_id": 5,
+            "category": "IT",
+            "status": "Resolved",
+            "key_issue": "Computer cannot start.",
+            "probability": 0.85
+          },
+          {
+            "complaint_id": 6,
+            "category": "Facilities",
+            "status": "Resolved",
+            "key_issue": "Elevator on level 5 is not working properly.",
+            "probability": 0.6
+          },
+          {
+            "complaint_id": 7,
+            "category": "Unclassified",
+            "status": "Pending",
+            "key_issue": "Noise levels in the open office space are too high.",
+            "probability": 0.4
+          },
+          {
+            "complaint_id": 8,
+            "category": "IT",
+            "status": "Pending",
+            "key_issue": "Internet connection is down in the entire building.",
+            "probability": 0.8
+          },
+          {
+            "complaint_id": 9,
+            "category": "Facilities",
+            "status": "In Progress",
+            "key_issue": "Cafeteria food quality has decreased significantly.",
+            "probability": 0.7
+          },
+          {
+            "complaint_id": 10,
+            "category": "Unclassified",
+            "status": "Pending",
+            "key_issue": "Request for more parking spaces.",
+            "probability": 0.3
+          },
+          {
+            "complaint_id": 11,
+            "category": "Safety",
+            "status": "Pending",
+            "key_issue": "Fire alarm went off without any fire present.",
+            "probability": 0.9
+          },
+          {
+            "complaint_id": 12,
+            "category": "Unclassified",
+            "status": "Pending",
+            "key_issue": "Suggestion for a wellness program at work.",
+            "probability": 0.2
+          }
+        ],
+        "top_categories": [
+          {
+            "category": "Facilities",
+            "count": 5
+          },
+          {
+            "category": "IT",
+            "count": 3
+          },
+          {
+            "category": "Unclassified",
+            "count": 3
+          },
+          {
+            "category": "Payroll",
+            "count": 1
+          }
+        ]
+      }
+    }
+  ],
+  "notifications": []
+}
