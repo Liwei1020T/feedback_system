@@ -14,7 +14,7 @@ import { getWeeklyReports, generateReport, getWeeklyReportContent, deleteReport 
 import { Card, CardBody, CardTitle } from "../components/Card";
 import { useToastStore } from "../store/toast";
 import ConfirmDialog from "../components/ConfirmDialog";
-import type { Report, ReportMetadata } from "../types";
+import type { Report, ReportMetadata, ComplaintStatus } from "../types";
 
 const ReportsPage = () => {
   const queryClient = useQueryClient();
@@ -158,11 +158,13 @@ const ReportsPage = () => {
           if (!issue || typeof issue !== "object") {
             return acc;
           }
-          const complaintId = Number((issue as Record<string, unknown>).complaint_id ?? 0);
-          const category = String((issue as Record<string, unknown>).category ?? "Unclassified");
-          const status = String((issue as Record<string, unknown>).status ?? "Pending");
-          const keyIssue = String((issue as Record<string, unknown>).key_issue ?? "");
-          const probabilityValue = Number((issue as Record<string, unknown>).probability ?? 0);
+          const complaintId = Number((issue as unknown as Record<string, unknown>).complaint_id ?? 0);
+          const category = String((issue as unknown as Record<string, unknown>).category ?? "Unclassified");
+          const rawStatus = String((issue as unknown as Record<string, unknown>).status ?? "Pending");
+          const status: ComplaintStatus =
+            rawStatus === "In Progress" || rawStatus === "Resolved" ? rawStatus : "Pending";
+          const keyIssue = String((issue as unknown as Record<string, unknown>).key_issue ?? "");
+          const probabilityValue = Number((issue as unknown as Record<string, unknown>).probability ?? 0);
           acc.push({
             complaint_id: complaintId,
             category,
@@ -178,8 +180,8 @@ const ReportsPage = () => {
           if (!entry || typeof entry !== "object") {
             return acc;
           }
-          const category = String((entry as Record<string, unknown>).category ?? "");
-          const count = Number((entry as Record<string, unknown>).count ?? 0);
+          const category = String((entry as unknown as Record<string, unknown>).category ?? "");
+          const count = Number((entry as unknown as Record<string, unknown>).count ?? 0);
           if (category) {
             acc.push({ category, count: Number.isFinite(count) ? count : 0 });
           }

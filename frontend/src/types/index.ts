@@ -43,6 +43,9 @@ export interface Complaint {
   resolution_time_hours?: number | null;
   internal_notes?: InternalNote[];
   watchers?: number[];
+  escalated_to?: number | null;
+  escalated_at?: string | null;
+  escalation_reason?: string | null;
 }
 
 export interface Reply {
