@@ -91,6 +91,10 @@ You can run a quick smoke test by executing:
 
 Then use the Swagger UI or `curl`/Postman to exercise endpoints. Because persistence is in-memory, restarting the server clears all data. Integrate a real database/AI provider by replacing `app/datastore.py` and `app/services/ai.py` respectively.
 
+## Deployment
+
+- **Render.com**: Follow `docs/render-deployment.md` for a step-by-step guide (backend web service + frontend static site, persistent disk setup, and environment variables).
+
 ## 🚀 Features
 
 - **Smart Complaint Processing**: AI-powered analysis using Groq LLM

@@ -14,7 +14,7 @@ import { getWeeklyReports, generateReport, getWeeklyReportContent, deleteReport 
 import { Card, CardBody, CardTitle } from "../components/Card";
 import { useToastStore } from "../store/toast";
 import ConfirmDialog from "../components/ConfirmDialog";
-import type { Report, ReportMetadata, ComplaintStatus } from "../types";
+import type { Report, ReportMetadata, ComplaintStatus, ComplaintKind } from "../types";
 
 const ReportsPage = () => {
   const queryClient = useQueryClient();
@@ -158,18 +158,22 @@ const ReportsPage = () => {
           if (!issue || typeof issue !== "object") {
             return acc;
           }
-          const complaintId = Number((issue as unknown as Record<string, unknown>).complaint_id ?? 0);
-          const category = String((issue as unknown as Record<string, unknown>).category ?? "Unclassified");
-          const rawStatus = String((issue as unknown as Record<string, unknown>).status ?? "Pending");
-          const status: ComplaintStatus =
-            rawStatus === "In Progress" || rawStatus === "Resolved" ? rawStatus : "Pending";
-          const keyIssue = String((issue as unknown as Record<string, unknown>).key_issue ?? "");
-          const probabilityValue = Number((issue as unknown as Record<string, unknown>).probability ?? 0);
-          acc.push({
-            complaint_id: complaintId,
-            category,
-            status,
-            key_issue: keyIssue,
+        const complaintId = Number((issue as unknown as Record<string, unknown>).complaint_id ?? 0);
+        const category = String((issue as unknown as Record<string, unknown>).category ?? "Unclassified");
+        const rawStatus = String((issue as unknown as Record<string, unknown>).status ?? "Pending");
+        const rawKind = String((issue as unknown as Record<string, unknown>).kind ?? "complaint");
+        const status: ComplaintStatus =
+          rawStatus === "In Progress" || rawStatus === "Resolved" ? rawStatus : "Pending";
+        const keyIssue = String((issue as unknown as Record<string, unknown>).key_issue ?? "");
+        const probabilityValue = Number((issue as unknown as Record<string, unknown>).probability ?? 0);
+        const kind: ComplaintKind =
+          rawKind === "feedback" ? "feedback" : "complaint";
+        acc.push({
+          complaint_id: complaintId,
+          category,
+          status,
+          kind,
+          key_issue: keyIssue,
             probability: Number.isFinite(probabilityValue) ? probabilityValue : 0
           });
           return acc;
