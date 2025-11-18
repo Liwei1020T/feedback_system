@@ -1,6 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import type { Location } from "react-router-dom";
+import { Link, useLocation, useNavigate, type Location } from "react-router-dom";
 
 import { useAuth } from "../hooks/useAuth";
 
@@ -33,8 +32,8 @@ const LoginPage = () => {
     <div className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden bg-[var(--color-background)]">
       {/* Light subtle background accents (optional) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-200/30 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-200/30 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-200/30 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-200/30 rounded-full blur-3xl" />
       </div>
 
       <div className="relative w-full max-w-md">
@@ -42,12 +41,15 @@ const LoginPage = () => {
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-2xl mb-4 shadow-lg">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
               </svg>
             </div>
-            <h1 className="text-3xl font-bold text-slate-900 mb-2">
-              Jabil Feedback System
-            </h1>
+            <h1 className="text-3xl font-bold text-slate-900 mb-2">Jabil Feedback System</h1>
             <p className="text-slate-500 font-medium">Admin login</p>
           </div>
 
@@ -84,8 +86,20 @@ const LoginPage = () => {
               {loading ? (
                 <span className="flex items-center justify-center gap-2">
                   <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      fill="none"
+                    />
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    />
                   </svg>
                   Signing in...
                 </span>
@@ -98,9 +112,12 @@ const LoginPage = () => {
           <div className="mt-8 pt-6 border-t border-slate-200">
             <p className="text-center text-sm text-slate-600">
               Need to submit a complaint?{" "}
-              <a className="text-blue-600 font-bold hover:text-blue-700 transition-colors" href="/submit">
+              <Link
+                className="text-blue-600 font-bold hover:text-blue-700 transition-colors"
+                to="/submit"
+              >
                 Go to public form →
-              </a>
+              </Link>
             </p>
           </div>
         </div>
@@ -110,3 +127,4 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+
