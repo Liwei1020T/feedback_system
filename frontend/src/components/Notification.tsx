@@ -28,13 +28,11 @@ const NotificationBell = () => {
     const token = localStorage.getItem("access_token");
     if (!token) return;
 
-    // Create EventSource for SSE
-    const eventSource = new EventSource(
-      `${import.meta.env.VITE_API_URL || "http://localhost:8000"}/api/notifications/stream/sse`,
-      {
-        withCredentials: true,
-      }
-    );
+    // Create EventSource for SSE.
+    // EventSource cannot set custom headers, so pass the bearer token via query string.
+    const baseUrl = `${import.meta.env.VITE_API_URL || "http://localhost:8000"}/api/notifications/stream/sse`;
+    const url = `${baseUrl}?token=${encodeURIComponent(token)}`;
+    const eventSource = new EventSource(url, { withCredentials: true });
 
     eventSource.onmessage = (event) => {
       try {

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import List, Optional, Union
 
-from fastapi import Depends, Header, HTTPException, status
+from fastapi import Depends, Header, HTTPException, Query, status
 
 from .services.auth import auth_service
 from .models import Complaint, Role
@@ -15,11 +15,19 @@ def _extract_token(authorization: str) -> str:
     return token
 
 
-def get_current_user(authorization: Optional[str] = Header(None)) -> dict:
+def get_current_user(
+    authorization: Optional[str] = Header(None),
+    token: Optional[str] = Query(None),
+) -> dict:
+    if not authorization and token:
+        # EventSource cannot send Authorization headers; allow token in query as fallback.
+        authorization = f"Bearer {token}"
+
     if not authorization:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Missing authorization header")
-    token = _extract_token(authorization)
-    return auth_service.get_user_from_token(token)
+
+    token_value = _extract_token(authorization)
+    return auth_service.get_user_from_token(token_value)
 
 
 def get_current_admin(user: dict = Depends(get_current_user)) -> dict:
