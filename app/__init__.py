@@ -1,1 +1,1 @@
-"Jabil Feedback System backend package."
+"AI Feedback Management System backend package."

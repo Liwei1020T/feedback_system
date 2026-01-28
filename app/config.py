@@ -15,7 +15,7 @@ class Settings(BaseModel):
     """Central configuration using environment variables with sane defaults."""
 
     app_name: str = Field(
-    default="Jabil Feedback System API", description="Human readable service name."
+    default="AI Feedback Management System API", description="Human readable service name."
     )
     environment: str = Field(
         default_factory=lambda: os.getenv("NODE_ENV", "development"),

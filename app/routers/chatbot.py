@@ -223,7 +223,7 @@ async def chat_with_ai(
         messages = [
             {
                 "role": "system",
-                "content": f"""You are an intelligent AI assistant for the Jabil Feedback System. You have access to real-time data about feedback, users, and system metrics.
+                "content": f"""You are an intelligent AI assistant for the AI Feedback Management System. You have access to real-time data about feedback, users, and system metrics.
 
 {system_context}
 
@@ -268,7 +268,7 @@ Be friendly, professional, and data-driven in your responses."""
 
         except Exception as e:
             logger.error(f"Groq API error: {e}")
-            ai_response = "I apologize, but I'm having trouble connecting to my AI service right now. However, I can see that you have access to the Jabil Feedback System. Please try again in a moment."
+            ai_response = "I apologize, but I'm having trouble connecting to my AI service right now. However, I can see that you have access to the AI Feedback Management System. Please try again in a moment."
         
         # Add AI response to history
         conversation_history[conversation_id].append({

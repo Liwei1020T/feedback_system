@@ -13,6 +13,6 @@ If you have any questions, please contact us.
 Warm regards,
 {{ responder_name or "Support Team" }}
 
-This is an automated notification from the Jabil Feedback System.
+This is an automated notification from the AI Feedback Management System.
 Please do not reply directly to this email.
 

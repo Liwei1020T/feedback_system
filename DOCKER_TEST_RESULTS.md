@@ -40,7 +40,7 @@
 - ✅ API documentation accessible at /docs
 
 ### 4. Docker Compose
-- ✅ Service created: `jabil-feedback`
+- ✅ Service created: `feedback-app`
 - ✅ Volumes created:
   - `feedback_feedback-data` (database)
   - `feedback_feedback-uploads` (file uploads)

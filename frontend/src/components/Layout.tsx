@@ -5,7 +5,7 @@ import TopBar from "./TopBar";
 import { FloatingChatbot } from "./FloatingChatbot";
 
 const titles: Record<string, string> = {
-  "/": "Jabil Feedback Dashboard",
+  "/": "Feedback Dashboard",
   "/analytics": "Analytics & Insights",
   "/insights": "AI-Powered Insights",
   "/chatbot": "AI Assistant",
@@ -21,7 +21,7 @@ const titles: Record<string, string> = {
 
 const Layout = () => {
   const location = useLocation();
-  const title = titles[location.pathname] ?? "Jabil Feedback System";
+  const title = titles[location.pathname] ?? "AI Feedback System";
 
   return (
     <div className="app-shell flex min-h-screen text-slate-900">

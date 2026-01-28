@@ -49,7 +49,7 @@ const LoginPage = () => {
                 />
               </svg>
             </div>
-            <h1 className="text-3xl font-bold text-slate-900 mb-2">Jabil Feedback System</h1>
+            <h1 className="text-3xl font-bold text-slate-900 mb-2">AI Feedback System</h1>
             <p className="text-slate-500 font-medium">Admin login</p>
           </div>
 

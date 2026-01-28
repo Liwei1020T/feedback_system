@@ -1,6 +1,6 @@
 # Docker Deployment Guide
 
-This guide explains how to deploy the Jabil Feedback System using Docker and Docker Compose on your VPS.
+This guide explains how to deploy the AI Feedback Management System using Docker and Docker Compose on your VPS.
 
 ## Prerequisites
 

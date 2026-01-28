@@ -17,9 +17,9 @@ Keep this managed block so 'openspec update' can refresh the instructions.
 
 <!-- OPENSPEC:END -->
 
-# AI Agent Guidelines for Jabil Feedback System
+# AI Agent Guidelines for Feedback Management System
 
-> **Purpose**: This document guides AI coding assistants working on the feedback-v3 Jabil Feedback System. Follow these guidelines to maintain code quality, consistency, and system integrity.
+> **Purpose**: This document guides AI coding assistants working on the Feedback Management System. Follow these guidelines to maintain code quality, consistency, and system integrity.
 
 ---
 

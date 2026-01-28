@@ -1,6 +1,6 @@
 # Render Deployment Guide
 
-This guide walks through hosting the Jabil Feedback System (FastAPI backend + Vite/React frontend) on [Render](https://render.com). It covers the required services, environment variables, persistent storage, and verification steps.
+This guide walks through hosting the AI Feedback Management System (FastAPI backend + Vite/React frontend) on [Render](https://render.com). It covers the required services, environment variables, persistent storage, and verification steps.
 
 > **Tip:** Render can deploy everything defined in a `render.yaml`, but you can also follow the same settings manually in the dashboard. Both options are described below.
 
@@ -48,7 +48,7 @@ Create `render.yaml` in the repo root and push it so Render can autodiscover bot
 ```yaml
 services:
   - type: web
-    name: jabil-feedback-api
+    name: feedback-api
     env: python
     plan: starter
     buildCommand: pip install --upgrade pip && pip install -r requirements.txt
@@ -67,11 +67,11 @@ services:
       - key: UPLOAD_DIR
         value: /var/persist/uploads
       - key: CORS_ALLOW_ORIGINS
-        value: https://jabil-feedback-frontend.onrender.com
+        value: https://feedback-frontend.onrender.com
       # Add JWT_SECRET, GROQ_API_KEY, SMTP_* either inline (not recommended) or via dashboard env var group
 
   - type: web
-    name: jabil-feedback-frontend
+    name: feedback-frontend
     env: static
     rootDir: frontend
     buildCommand: npm install && npm run build
@@ -81,7 +81,7 @@ services:
       - key: VITE_API_URL
         fromService:
           type: web
-          name: jabil-feedback-api
+          name: feedback-api
           property: url
 ```
 
@@ -114,7 +114,7 @@ Replace service names, plan sizes, and domains with your own. You can also conve
 2. Set **Root Directory** to `frontend`.
 3. **Build command:** `npm install && npm run build`.
 4. **Publish directory:** `dist`.
-5. Set `VITE_API_URL` to the full backend origin (for example, `https://jabil-feedback-api.onrender.com`).
+5. Set `VITE_API_URL` to the full backend origin (for example, `https://feedback-api.onrender.com`).
 6. Deploy. Once live, open the Render-provided URL and confirm login works against the backend.
 
 > **Note:** If you plan to attach a custom domain, add it after the first successful deploy and update `CORS_ALLOW_ORIGINS` to include the new host.

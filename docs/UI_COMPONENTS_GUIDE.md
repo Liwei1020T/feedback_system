@@ -1,6 +1,6 @@
 # UI Enhancement Components - Usage Guide
 
-This document demonstrates how to use the newly added UI components in the Jabil Feedback System.
+This document demonstrates how to use the newly added UI components in the AI Feedback Management System.
 
 ## 📦 Components Added
 

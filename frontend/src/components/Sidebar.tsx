@@ -87,7 +87,7 @@ const Sidebar = () => {
             <Sparkles className="w-5 h-5" />
           </div>
           <div>
-            <p className="font-bold text-lg tracking-tight text-white">Jabil Feedback</p>
+            <p className="font-bold text-lg tracking-tight text-white">AI Feedback</p>
             <p className="text-xs text-slate-300 flex items-center gap-1.5 mt-0.5">
               <span className="app-sidebar__status-dot"></span>
               {user?.username ?? "Guest"}
