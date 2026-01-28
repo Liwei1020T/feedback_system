@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+  # Backend API
   feedback-app:
     build:
       context: .
@@ -40,7 +41,7 @@ services:
       - SEED_DEMO_DATA=${SEED_DEMO_DATA:-true}
 
       # CORS
-      - CORS_ALLOW_ORIGINS=${CORS_ALLOW_ORIGINS:-http://localhost:5173}
+      - CORS_ALLOW_ORIGINS=${CORS_ALLOW_ORIGINS:-http://localhost:5174}
       - CORS_ALLOW_ORIGIN_REGEX=${CORS_ALLOW_ORIGIN_REGEX}
 
       # Logging
@@ -71,6 +72,22 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+
+  # Frontend
+  feedback-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_URL=${VITE_API_URL:-http://localhost:8001}
+    container_name: feedback-frontend
+    restart: unless-stopped
+    ports:
+      - "5174:5174"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - feedback-app
 
 volumes:
   feedback-uploads:
