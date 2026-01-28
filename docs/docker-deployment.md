@@ -2,6 +2,13 @@
 
 This guide explains how to deploy the AI Feedback Management System using Docker and Docker Compose on your VPS.
 
+## Live Demo
+
+Check out the live demo to see the system in action:
+- **Frontend**: [https://feedback.li-wei.net](https://feedback.li-wei.net)
+- **API Documentation**: [https://feedback_api.li-wei.net/docs](https://feedback_api.li-wei.net/docs)
+- **Demo Login**: superadmin / superadmin123
+
 ## Prerequisites
 
 - A VPS with Docker and Docker Compose installed

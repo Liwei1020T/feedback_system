@@ -2,6 +2,14 @@
 
 A full-stack AI-powered feedback management system built with FastAPI and React. Features intelligent complaint classification, automated routing, real-time analytics, and comprehensive reporting capabilities.
 
+## 🌐 Live Demo
+
+- **Frontend**: [https://feedback.li-wei.net](https://feedback.li-wei.net)
+- **API Docs**: [https://feedback_api.li-wei.net/docs](https://feedback_api.li-wei.net/docs)
+- **Demo Credentials**:
+  - Super Admin: `superadmin` / `superadmin123`
+  - Admin: `admin` / `admin123`
+
 ## 🚀 Quick Start
 
 ### Option 1: Docker Deployment (Recommended for Production)
@@ -154,10 +162,6 @@ Visit `http://localhost:8000/docs` for interactive Swagger UI documentation.
 ### Docker (Recommended)
 Complete production-ready setup with persistent volumes and health checks.
 - See [Docker Deployment Guide](docs/docker-deployment.md)
-
-### Render.com
-Platform-as-a-Service deployment with automatic builds.
-- See [Render Deployment Guide](docs/render-deployment.md)
 
 ### Manual VPS Deployment
 Deploy on any Ubuntu/Debian VPS with Docker support.
