@@ -1,4 +1,4 @@
-# Jabil Feedback System
+# AI Feedback Management System
 
 A full-stack AI-powered feedback management system built with FastAPI and React. Features intelligent complaint classification, automated routing, real-time analytics, and comprehensive reporting capabilities.
 
@@ -402,7 +402,7 @@ Before deploying to production, ensure you:
 
 ## 📄 License
 
-This project is proprietary software for Jabil internal use.
+This project is proprietary software for internal use.
 
 ## 👥 Support
 
@@ -421,4 +421,4 @@ Built with modern open-source technologies:
 
 ---
 
-**Made with ❤️ for Jabil**
+**Made with ❤️ by the development team**
