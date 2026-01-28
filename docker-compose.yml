@@ -1,0 +1,78 @@
+version: '3.8'
+
+services:
+  feedback-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jabil-feedback
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      # Application
+      - NODE_ENV=production
+
+      # Security (MUST CHANGE IN PRODUCTION)
+      - JWT_SECRET=${JWT_SECRET:-change-this-secret-in-production}
+      - JWT_EXPIRES_IN_MINUTES=${JWT_EXPIRES_IN_MINUTES:-30}
+      - REFRESH_TOKEN_EXPIRES_IN_MINUTES=${REFRESH_TOKEN_EXPIRES_IN_MINUTES:-10080}
+      - BCRYPT_ROUNDS=${BCRYPT_ROUNDS:-12}
+
+      # AI Service
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.3-70b-versatile}
+
+      # Email Configuration
+      - EMAIL_FROM=${EMAIL_FROM:-noreply@company.com}
+      - SMTP_HOST=${SMTP_HOST:-smtp.sendgrid.net}
+      - SMTP_PORT=${SMTP_PORT:-587}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASS=${SMTP_PASS}
+
+      # File Storage
+      - UPLOAD_DIR=/app/uploads
+      - DATA_STORE_PATH=/app/data/db.json
+      - MAX_FILE_SIZE=${MAX_FILE_SIZE:-10485760}
+      - ALLOWED_FILE_TYPES=${ALLOWED_FILE_TYPES:-image/jpeg,image/png,video/mp4,application/pdf}
+
+      # CORS
+      - CORS_ALLOW_ORIGINS=${CORS_ALLOW_ORIGINS:-http://localhost:5173}
+      - CORS_ALLOW_ORIGIN_REGEX=${CORS_ALLOW_ORIGIN_REGEX}
+
+      # Logging
+      - LOG_FORMAT=${LOG_FORMAT:-json}
+
+      # SLA Configuration
+      - SLA_HOURS_NORMAL=${SLA_HOURS_NORMAL:-72}
+      - SLA_HOURS_URGENT=${SLA_HOURS_URGENT:-24}
+
+      # Weekly Reports
+      - REPORT_DAY=${REPORT_DAY:-mon}
+      - REPORT_TIME=${REPORT_TIME:-08:00}
+      - REPORT_TIMEZONE=${REPORT_TIMEZONE:-UTC}
+      - REPORT_RECIPIENTS_DEFAULT=${REPORT_RECIPIENTS_DEFAULT}
+
+      # Plants
+      - PLANTS=${PLANTS:-P1,P2,BK}
+
+    volumes:
+      # Persistent data storage
+      - feedback-uploads:/app/uploads
+      - feedback-data:/app/data
+      - feedback-logs:/app/logs
+
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  feedback-uploads:
+    driver: local
+  feedback-data:
+    driver: local
+  feedback-logs:
+    driver: local

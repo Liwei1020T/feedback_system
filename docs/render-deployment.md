@@ -26,6 +26,7 @@ This guide walks through hosting the Jabil Feedback System (FastAPI backend + Vi
 | `GROQ_API_KEY` | Enables AI classification | Optional if AI is disabled. |
 | `EMAIL_FROM`, `SMTP_*` | Reply/notification emails | Configure if SMTP is required. |
 | `CORS_ALLOW_ORIGINS` | Comma-separated origins | Include the Render frontend URL. |
+| `CORS_ALLOW_ORIGIN_REGEX` | Optional regex for origin matching (Python `re`) | Use when you want to cover an entire subdomain family instead of listing each host. |
 | `DATA_STORE_PATH` | JSON datastore location | Point to the mounted disk, e.g. `/var/persist/db.json`. |
 | `UPLOAD_DIR` | Attachment storage | e.g. `/var/persist/uploads`. |
 | `REPORT_*`, `LOG_FORMAT`, etc. | Optional overrides | Defaults work if unset. |
@@ -101,7 +102,7 @@ Replace service names, plan sizes, and domains with your own. You can also conve
    UPLOAD_DIR=/var/persist/uploads
    ```
    Create the two folders once via shell (`mkdir -p /var/persist/uploads`) or an init script.
-7. Configure environment variables from the table above. Make sure `CORS_ALLOW_ORIGINS` includes both the production frontend URL and any admin domain you use for manual testing (comma-separated).
+7. Configure environment variables from the table above. Make sure `CORS_ALLOW_ORIGINS` includes both the production frontend URL and any admin domain you use for manual testing (comma-separated). If you need to cover many subdomains, define `CORS_ALLOW_ORIGIN_REGEX` instead of enumerating each hostname.
 8. If you plan to keep AI disabled, leave `GROQ_API_KEY` unset and the AI routes will fall back gracefully.
 9. Click **Create Web Service**. Watch the logs to confirm `Application startup complete` and hit `https://<backend>/health` to verify a `{"status": "ok"}` response.
 
@@ -134,10 +135,9 @@ Replace service names, plan sizes, and domains with your own. You can also conve
 ## 7. Troubleshooting Tips
 
 - **`ModuleNotFoundError` during build** – ensure the root path contains `requirements.txt` and the service is created at the repository root (not `frontend/`).
-- **CORS errors** – confirm `CORS_ALLOW_ORIGINS` exactly matches the scheme + host of the frontend and any localhost origins you use.
+- **CORS errors** – confirm `CORS_ALLOW_ORIGINS` exactly matches the scheme + host of the frontend and any localhost origins you use, or provide `CORS_ALLOW_ORIGIN_REGEX` to cover a whole class of domains in one pattern.
 - **Uploads vanish after restart** – verify the persistent disk is attached and the `UPLOAD_DIR` is pointing inside it.
 - **Slow cold starts** – Render free plans spin down; upgrade to Starter or above for always-on behavior if background schedulers are critical.
 - **Background jobs missing** – the APScheduler runs inside the web service; make sure only one instance of the backend is scaled horizontally or the jobs will fire multiple times.
 
 With the services deployed, commit any supporting infrastructure files (`render.yaml`, documentation updates) so future teammates can redeploy consistently.
-

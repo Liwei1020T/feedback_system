@@ -71,6 +71,9 @@ class Settings(BaseModel):
             if origin.strip()
         ]
     )
+    cors_allow_origin_regex: Optional[str] = Field(
+        default_factory=lambda: os.getenv("CORS_ALLOW_ORIGIN_REGEX")
+    )
     log_format: str = Field(
         default_factory=lambda: os.getenv("LOG_FORMAT", "json").strip().lower() or "json"
     )

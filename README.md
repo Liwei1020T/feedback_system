@@ -47,6 +47,7 @@ Key settings (with defaults) can be overridden via the environment:
 | `GROQ_API_KEY` | Groq API key for AI features | _required for AI_ |
 | `GROQ_MODEL` | Groq model name | `llama-3.3-70b-versatile` |
 | `CORS_ALLOW_ORIGINS` | Comma-separated origins allowed by CORS | `http://localhost:5173` |
+| `CORS_ALLOW_ORIGIN_REGEX` | Optional Python regex that matches allowed origins (takes precedence over the list) | _unset_ |
 | `BCRYPT_ROUNDS` | Bcrypt cost factor (security vs CPU) | `12` |
 | `LOG_FORMAT` | `json` or `text` log output | `json` |
 | `REQUEST_ID_HEADER` | Header name used for request correlation | `X-Request-ID` |
