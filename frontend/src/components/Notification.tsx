@@ -17,9 +17,12 @@ const NotificationBell = () => {
     queryKey: ["notifications"],
     queryFn: () => listNotifications(undefined, 50),
     refetchInterval: 30000, // Refetch every 30 seconds as fallback
+    enabled: !!user, // Only fetch when user is logged in
   });
 
-  const unreadCount = notifications.filter(n => !n.is_read).length;
+  // Ensure notifications is always an array
+  const notificationList = Array.isArray(notifications) ? notifications : [];
+  const unreadCount = notificationList.filter(n => !n.is_read).length;
 
   // SSE Connection for real-time updates
   useEffect(() => {
@@ -163,7 +166,7 @@ const NotificationBell = () => {
                   </span>
                 )}
               </p>
-              {notifications.length > 0 && (
+              {notificationList.length > 0 && (
                 <button
                   className="text-xs inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-700 font-bold transition-colors"
                   onClick={() => markAllReadMutation.mutate()}
@@ -176,14 +179,14 @@ const NotificationBell = () => {
             </div>
             
             <div className="max-h-96 overflow-y-auto">
-              {notifications.length === 0 ? (
+              {notificationList.length === 0 ? (
                 <div className="px-5 py-8 text-center">
                   <Bell className="w-12 h-12 text-slate-300 mx-auto mb-2" />
                   <p className="text-sm text-slate-500 font-medium">No notifications yet</p>
                   <p className="text-xs text-slate-400 mt-1">You're all caught up!</p>
                 </div>
               ) : (
-                notifications.map((notif) => (
+                notificationList.map((notif) => (
                   <div
                     key={notif.id}
                     className={`group relative w-full text-left px-5 py-4 border-b border-slate-100 last:border-0 transition-all cursor-pointer ${
