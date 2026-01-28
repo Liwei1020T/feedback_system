@@ -366,3 +366,26 @@ async def http_error_handler(request: Request, exc: HTTPException):
         content=content,
         headers={settings.request_id_header: request_id},
     )
+
+
+# ----------------------------------------------------------------------------
+# Serve frontend static files (for Docker deployment)
+# ----------------------------------------------------------------------------
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+
+_frontend_dist = Path(__file__).parent.parent / "frontend" / "dist"
+if _frontend_dist.exists():
+    # Serve static assets (JS, CSS, images)
+    _assets_path = _frontend_dist / "assets"
+    if _assets_path.exists():
+        app.mount("/assets", StaticFiles(directory=_assets_path), name="static_assets")
+
+    # Catch-all route for SPA - must be last
+    @app.get("/{full_path:path}")
+    async def serve_spa(full_path: str):
+        """Serve frontend SPA for all non-API routes."""
+        file_path = _frontend_dist / full_path
+        if file_path.exists() and file_path.is_file():
+            return FileResponse(file_path)
+        return FileResponse(_frontend_dist / "index.html")
