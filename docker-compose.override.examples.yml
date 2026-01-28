@@ -1,0 +1,223 @@
+# Docker Compose Override Examples
+
+# This file shows various override configurations for different deployment scenarios.
+# Copy the relevant section to docker-compose.override.yml to use it.
+
+# ============================================================
+# Scenario 1: Production Deployment (No Demo Data)
+# ============================================================
+# File: docker-compose.override.yml
+---
+version: '3.8'
+services:
+  feedback-app:
+    environment:
+      # Disable demo data
+      - SEED_DEMO_DATA=false
+      # Production security settings
+      - JWT_SECRET=${JWT_SECRET}  # Use strong random secret
+      - BCRYPT_ROUNDS=14          # Increase for production
+      # Production email settings
+      - EMAIL_FROM=noreply@yourcompany.com
+      - SMTP_HOST=smtp.yourprovider.com
+      - SMTP_PORT=587
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASS=${SMTP_PASS}
+      # Production CORS
+      - CORS_ALLOW_ORIGINS=https://feedback.yourcompany.com
+      # Logging
+      - LOG_FORMAT=json
+      - NODE_ENV=production
+
+# ============================================================
+# Scenario 2: Development with Demo Data (Default)
+# ============================================================
+---
+version: '3.8'
+services:
+  feedback-app:
+    environment:
+      # Enable demo data (default)
+      - SEED_DEMO_DATA=true
+      # Development CORS (allow multiple origins)
+      - CORS_ALLOW_ORIGINS=http://localhost:5173,http://localhost:3000
+      # Development logging
+      - LOG_FORMAT=text
+      - NODE_ENV=development
+    # Mount local code for hot-reload (development only)
+    volumes:
+      - ./app:/app/app
+      - ./frontend/dist:/app/frontend/dist
+      - feedback-uploads:/app/uploads
+      - feedback-data:/app/data
+      - feedback-logs:/app/logs
+
+# ============================================================
+# Scenario 3: Testing Environment
+# ============================================================
+---
+version: '3.8'
+services:
+  feedback-app:
+    environment:
+      # Enable demo data for testing
+      - SEED_DEMO_DATA=true
+      # Test email configuration (use mailtrap or similar)
+      - SMTP_HOST=smtp.mailtrap.io
+      - SMTP_PORT=2525
+      - SMTP_USER=${MAILTRAP_USER}
+      - SMTP_PASS=${MAILTRAP_PASS}
+      # Relaxed security for testing
+      - JWT_EXPIRES_IN_MINUTES=60
+      - BCRYPT_ROUNDS=10
+      # Testing CORS
+      - CORS_ALLOW_ORIGINS=http://localhost:5173,http://test.local
+    # Use tmpfs for faster testing
+    tmpfs:
+      - /app/logs
+
+# ============================================================
+# Scenario 4: Multi-Instance Setup with Load Balancer
+# ============================================================
+---
+version: '3.8'
+services:
+  feedback-app-1:
+    extends:
+      service: feedback-app
+    container_name: feedback-app-1
+    ports:
+      - "8001:8000"
+    environment:
+      - SEED_DEMO_DATA=false
+
+  feedback-app-2:
+    extends:
+      service: feedback-app
+    container_name: feedback-app-2
+    ports:
+      - "8002:8000"
+    environment:
+      - SEED_DEMO_DATA=false
+
+  # Shared volumes for data consistency
+  feedback-app-1:
+    volumes:
+      - feedback-uploads:/app/uploads
+      - feedback-data:/app/data
+      - feedback-logs-1:/app/logs
+
+  feedback-app-2:
+    volumes:
+      - feedback-uploads:/app/uploads
+      - feedback-data:/app/data
+      - feedback-logs-2:/app/logs
+
+volumes:
+  feedback-logs-1:
+  feedback-logs-2:
+
+# ============================================================
+# Scenario 5: Enhanced Demo with Custom Data
+# ============================================================
+---
+version: '3.8'
+services:
+  feedback-app:
+    environment:
+      - SEED_DEMO_DATA=true
+      # Customize demo data behavior
+      - PLANTS=Site1,Site2,Site3,HQ
+      - REPORT_RECIPIENTS_DEFAULT=admin@example.com,manager@example.com
+    # Add init container to run custom seed script
+    entrypoint: >
+      sh -c "
+        /app/scripts/docker-entrypoint.sh &
+        sleep 10 &&
+        python /app/scripts/seed_demo_data.py
+      "
+
+# ============================================================
+# Scenario 6: Backup-Enabled Deployment
+# ============================================================
+---
+version: '3.8'
+services:
+  feedback-app:
+    environment:
+      - SEED_DEMO_DATA=false
+    volumes:
+      - feedback-uploads:/app/uploads
+      - feedback-data:/app/data
+      - feedback-logs:/app/logs
+      # Mount backup directory
+      - ./backups:/app/backups
+
+  # Backup service
+  backup:
+    image: alpine:latest
+    volumes:
+      - feedback-data:/data:ro
+      - ./backups:/backup
+    command: >
+      sh -c "
+        while true; do
+          tar czf /backup/db-backup-$$(date +%Y%m%d-%H%M%S).tar.gz /data/db.json
+          find /backup -name 'db-backup-*.tar.gz' -mtime +7 -delete
+          sleep 86400
+        done
+      "
+    restart: unless-stopped
+
+# ============================================================
+# Scenario 7: Monitoring & Observability
+# ============================================================
+---
+version: '3.8'
+services:
+  feedback-app:
+    environment:
+      - SEED_DEMO_DATA=false
+      - LOG_FORMAT=json
+    labels:
+      - "prometheus.io/scrape=true"
+      - "prometheus.io/port=8000"
+      - "prometheus.io/path=/metrics"
+    # Expose logs for external logging driver
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+# ============================================================
+# Scenario 8: Reset Demo Data on Every Start
+# ============================================================
+---
+version: '3.8'
+services:
+  feedback-app:
+    environment:
+      - SEED_DEMO_DATA=true
+    # Don't use persistent volume for demo/testing
+    volumes:
+      - feedback-uploads:/app/uploads
+      - feedback-logs:/app/logs
+      # Use tmpfs for data (resets on restart)
+    tmpfs:
+      - /app/data
+
+# ============================================================
+# Usage Instructions
+# ============================================================
+
+# 1. Choose a scenario above
+# 2. Copy the relevant configuration
+# 3. Save it to: docker-compose.override.yml
+# 4. Run: docker-compose up -d
+
+# Example for Production:
+# cp docker-compose.override.yml.production docker-compose.override.yml
+# docker-compose up -d
+
+# The override file will automatically merge with docker-compose.yml

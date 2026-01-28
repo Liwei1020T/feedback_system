@@ -165,6 +165,32 @@ docker-compose logs -f
 
 The application will be available at `http://localhost:8000`. See [Docker Deployment Guide](docs/docker-deployment.md) for detailed instructions.
 
+#### 🌱 Demo Data
+
+The system automatically seeds comprehensive demo data on first deployment:
+- **10+ Admin Users** across different departments (IT, HR, Payroll, Facilities, Safety)
+- **12+ Sample Complaints** with realistic scenarios
+- **Multiple Replies** and internal notes
+- **Various Statuses**: Pending, In Progress, Resolved
+- **Multi-plant Data**: Distributed across P1, P2, BK plants
+
+**Default Admin Login**:
+- Username: `admin` / Password: `admin123`
+- Username: `superadmin` / Password: `superadmin123`
+
+To disable demo data:
+```bash
+SEED_DEMO_DATA=false docker-compose up -d
+```
+
+For complete demo data documentation, see [DEMO_DATA.md](DEMO_DATA.md).
+
+**Verify demo data setup**:
+```bash
+chmod +x scripts/test_demo_data.sh
+./scripts/test_demo_data.sh
+```
+
 ### Option 2: Local Development
 
 **Backend Setup:**

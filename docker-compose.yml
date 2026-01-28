@@ -8,7 +8,7 @@ services:
     container_name: feedback-app
     restart: unless-stopped
     ports:
-      - "8000:8000"
+      - "8001:8000"
     environment:
       # Application
       - NODE_ENV=production
@@ -35,6 +35,9 @@ services:
       - DATA_STORE_PATH=/app/data/db.json
       - MAX_FILE_SIZE=${MAX_FILE_SIZE:-10485760}
       - ALLOWED_FILE_TYPES=${ALLOWED_FILE_TYPES:-image/jpeg,image/png,video/mp4,application/pdf}
+
+      # Demo Data (set to false to disable demo data seeding)
+      - SEED_DEMO_DATA=${SEED_DEMO_DATA:-true}
 
       # CORS
       - CORS_ALLOW_ORIGINS=${CORS_ALLOW_ORIGINS:-http://localhost:5173}
